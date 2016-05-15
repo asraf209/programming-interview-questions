@@ -19,7 +19,7 @@ Get:
 Given a pair of k and time t, it should map the corresponding value v. 
 For any given time t, if it is not in the map then return value from its closest time that happened already.
 
-Example:
+## Example:
 
 For (k1, t2), it is not in the map. So it should return v1; the value of its closest time t1 that happened already.
 
