@@ -9,14 +9,15 @@ public class MapTimeTravel {
 	private Map<Integer, TreeMap<Long, Integer>> mapKtoTV = new HashMap<>();
 	
 	/**
-	 * O(1)
+	 * Ideally O(1). 
+	 * But since we are using TreeMap, it will be O(log m); m - size of t values for any k 
 	 * @param k
 	 * @param t
 	 * @param v
 	 */
 	public void put(int k, long t, int v){
-		TreeMap<Long, Integer> mapTV;		
-		if(mapKtoTV.containsKey(k)){
+		TreeMap<Long, Integer> mapTV;		// We are using TreeMap; so that, all t values will be in sorted order
+		if(mapKtoTV.containsKey(k)){		// TreeMap internally use RedBlackTree to make a balanced binary Tree
 			mapTV = mapKtoTV.get(k);
 			mapTV.put(t, v);
 		}
