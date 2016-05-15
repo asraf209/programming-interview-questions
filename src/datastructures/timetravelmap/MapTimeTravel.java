@@ -8,6 +8,12 @@ public class MapTimeTravel {
 	
 	private Map<Integer, TreeMap<Long, Integer>> mapKtoTV = new HashMap<>();
 	
+	/**
+	 * O(1)
+	 * @param k
+	 * @param t
+	 * @param v
+	 */
 	public void put(int k, long t, int v){
 		TreeMap<Long, Integer> mapTV;		
 		if(mapKtoTV.containsKey(k)){
@@ -21,6 +27,12 @@ public class MapTimeTravel {
 		}	
 	}
 	
+	/**
+	 * O(log m); m - size of t values for any k	 
+	 * @param k
+	 * @param t
+	 * @return
+	 */
 	public int get(int k, long t){
 		if(mapKtoTV.containsKey(k)){
 			TreeMap<Long, Integer> mapTV = mapKtoTV.get(k);
@@ -37,7 +49,7 @@ public class MapTimeTravel {
 	}
 	
 	/**
-	 * Using binary search approach
+	 * Using binary search approach; O(log n)
 	 * @param keys: Set of all t values
 	 * @param t: Target timestamp
 	 * @return v: Corresponding value that was happened closest to time t 
