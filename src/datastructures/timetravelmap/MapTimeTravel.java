@@ -38,7 +38,10 @@ public class MapTimeTravel {
 		return Integer.MIN_VALUE;
 	}
 	
-	
+	private long findClosestT(Set<Long> keys){
+		System.out.println(keys);
+		return 0;
+	}
 	
 	@Override
 	public String toString() {
