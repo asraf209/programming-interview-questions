@@ -1,6 +1,6 @@
 # Time Travel Map
 
-Make a map with k, timestamp(t) and v. It should support basic Map <key, value> operations (get, put).
+Make a map data structure with k, timestamp(t) and v. It should support basic Map <key, value> operations (get, put).
 
 Put:
 k1, t1 -> v1
