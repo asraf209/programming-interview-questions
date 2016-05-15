@@ -36,6 +36,12 @@ public class MapTimeTravel {
 		return Integer.MIN_VALUE;
 	}
 	
+	/**
+	 * Using binary search approach
+	 * @param keys: Set of all t values
+	 * @param t: Target timestamp
+	 * @return v: Corresponding value that was happened closest to time t 
+	 */
 	private long findClosestT(Long[] keys, long t){
 		if(keys==null || keys.length<1)
 			return -1;
