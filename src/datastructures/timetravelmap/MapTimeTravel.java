@@ -32,7 +32,6 @@ public class MapTimeTravel {
 				return mapTV.get(t);
 			else{
 				long closestT = findClosestT(mapTV.keySet().toArray(new Long[mapTV.size()]), t);
-				System.out.println(closestT);
 				return mapTV.containsKey(closestT)? mapTV.get(closestT) : Integer.MIN_VALUE;
 			}
 		}
@@ -41,7 +40,6 @@ public class MapTimeTravel {
 	}
 	
 	private long findClosestT(Long[] keys, long t){
-		System.out.println(keys[0] + ", " + keys[keys.length-1]);
 		if(keys==null || keys.length<1)
 			return -1;
 		
@@ -70,12 +68,16 @@ public class MapTimeTravel {
 		MapTimeTravel mapTimeTravel = new MapTimeTravel();
 		mapTimeTravel.put(1, 1000, 111);
 		mapTimeTravel.put(1, 100, 11111);
-		mapTimeTravel.put(1, 10000000, 11111111);
-		mapTimeTravel.put(2, 20, 222);
-		mapTimeTravel.put(2, 200, 22222);
-		System.out.println(mapTimeTravel);
 		
-		System.out.println(mapTimeTravel.get(1, 1001));
+		mapTimeTravel.put(2, 2000, 222222);
+		
+		mapTimeTravel.put(1, 10000, 1111111);
+		
+		
+		System.out.println(mapTimeTravel.get(1, 100));
+		System.out.println(mapTimeTravel.get(1, 999));
+		System.out.println(mapTimeTravel.get(1, 10999));
+		System.out.println(mapTimeTravel.get(2, 100));
 	}
 
 }
