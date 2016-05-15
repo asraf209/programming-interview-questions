@@ -21,5 +21,6 @@ For any given time t, if it is not in the map then return value from its closest
 
 Example:
 
-for (k1, t2), it is not in the map. So it should return v1; the value of its closest time t1 that happened already.
-for (k2, t2), there is no value that happened in or before t2. So return none.
+For (k1, t2), it is not in the map. So it should return v1; the value of its closest time t1 that happened already.
+
+For (k2, t2), there is no value that happened in or before t2. So return none.
