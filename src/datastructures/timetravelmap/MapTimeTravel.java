@@ -92,6 +92,14 @@ public class MapTimeTravel {
 		System.out.println(mapTimeTravel.get(1, 999));
 		System.out.println(mapTimeTravel.get(1, 10999));
 		System.out.println(mapTimeTravel.get(2, 100));
+		
+		/**
+		 * Output:
+		 * 	11111
+			11111
+			1111111
+			-2147483648
+		 */
 	}
 
 }
