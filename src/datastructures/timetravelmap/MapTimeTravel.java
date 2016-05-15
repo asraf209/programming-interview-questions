@@ -33,7 +33,7 @@ public class MapTimeTravel {
 			else{
 				long closestT = findClosestT(mapTV.keySet().toArray(new Long[mapTV.size()]), t);
 				System.out.println(closestT);
-				return mapTV.containsKey(t)? mapTV.get(closestT) : Integer.MIN_VALUE;
+				return mapTV.containsKey(closestT)? mapTV.get(closestT) : Integer.MIN_VALUE;
 			}
 		}
 				
