@@ -14,3 +14,6 @@ hs_err_pid*
 # IDE related files #
 .classpath
 .project
+
+# bin directory #
+bin/
