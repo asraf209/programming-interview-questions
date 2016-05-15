@@ -21,9 +21,18 @@ public class MapTimeTravel {
 		}	
 	}
 	
+	@Override
+	public String toString() {
+		return "MapTimeTravel [mapKtoTV=" + mapKtoTV + "]";
+	}	
 	
 	public static void main(String[] args) {
-		
+		MapTimeTravel mapTimeTravel = new MapTimeTravel();
+		mapTimeTravel.put(1, 10, 111);
+		mapTimeTravel.put(1, 100, 11111);
+		mapTimeTravel.put(2, 20, 222);
+		mapTimeTravel.put(2, 200, 22222);
+		System.out.println(mapTimeTravel);
 	}
 
 }
