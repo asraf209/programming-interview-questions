@@ -1,6 +1,7 @@
 package datastructures.timetravelmap;
 
 import java.util.HashMap;
+import java.util.Iterator;
 import java.util.Map;
 import java.util.Set;
 import java.util.TreeMap;
@@ -30,7 +31,8 @@ public class MapTimeTravel {
 			if(mapTV.containsKey(t))
 				return mapTV.get(t);
 			else{
-				long closestT = findClosestT(mapTV.keySet());
+				long closestT = findClosestT(mapTV.keySet().toArray(new Long[mapTV.size()]), t);
+				System.out.println(closestT);
 				return mapTV.containsKey(t)? mapTV.get(closestT) : Integer.MIN_VALUE;
 			}
 		}
@@ -38,9 +40,25 @@ public class MapTimeTravel {
 		return Integer.MIN_VALUE;
 	}
 	
-	private long findClosestT(Set<Long> keys){
-		System.out.println(keys);
-		return 0;
+	private long findClosestT(Long[] keys, long t){
+		System.out.println(keys[0] + ", " + keys[keys.length-1]);
+		if(keys==null || keys.length<1)
+			return -1;
+		
+		int s=0, e=keys.length-1;
+		while(s<e){
+			if((s+1==e) && (t>keys[s]) && (t<keys[e]))	
+				return s;
+			
+			int mid = (s+e)/2;			
+			if(t < keys[mid])	e = mid - 1;
+			else s = mid + 1;
+		}
+	
+		if(keys[s]<t)	return keys[s];
+		else if((s-1)>=0)	return keys[s-1];
+		
+		return -1;
 	}
 	
 	@Override
@@ -57,7 +75,7 @@ public class MapTimeTravel {
 		mapTimeTravel.put(2, 200, 22222);
 		System.out.println(mapTimeTravel);
 		
-		mapTimeTravel.get(1, 1001);
+		System.out.println(mapTimeTravel.get(1, 1001));
 	}
 
 }
