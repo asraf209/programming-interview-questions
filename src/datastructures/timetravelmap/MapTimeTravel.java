@@ -1,11 +1,8 @@
 package datastructures.timetravelmap;
 
 import java.util.HashMap;
-import java.util.Iterator;
 import java.util.Map;
-import java.util.Set;
 import java.util.TreeMap;
-import java.util.TreeSet;
 
 public class MapTimeTravel {
 	
@@ -72,8 +69,7 @@ public class MapTimeTravel {
 		mapTimeTravel.put(2, 2000, 222222);
 		
 		mapTimeTravel.put(1, 10000, 1111111);
-		
-		
+				
 		System.out.println(mapTimeTravel.get(1, 100));
 		System.out.println(mapTimeTravel.get(1, 999));
 		System.out.println(mapTimeTravel.get(1, 10999));
