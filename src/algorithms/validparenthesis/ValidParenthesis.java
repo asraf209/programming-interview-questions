@@ -22,9 +22,16 @@ public class ValidParenthesis {
 		return chStack.isEmpty();
     }
 	
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-
+	public static void main(String[] args) {		
+		System.out.println(isValid("()"));
+		System.out.println(isValid("()}"));
+		System.out.println(isValid("[(){[}]"));
 	}
-
 }
+
+/**
+ * Output:
+ * true
+ * false
+ * false
+ */
