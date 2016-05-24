@@ -1,24 +1,26 @@
 package algorithms.rpn;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Stack;
 
 public class RPN {
 
-	private static String makeRPN(String s){
+	private static List<String> makeRPN(String s){
 		Stack<String> operators = new Stack<>();		
-		StringBuffer rpn = new StringBuffer();		// Output
+		List<String> rpn = new ArrayList<>();		// Output
 		StringBuffer sbf = new StringBuffer();		// Holds each number
 		
 		for(char c : s.toCharArray()){
 			// Initialize buffer to fetch next number
 			if(c==' ' || c=='(' || c==')' || c=='+' || c=='-'){
 				if(sbf.length()!=0){
-					rpn.append(sbf.toString());
+					rpn.add(sbf.toString());
 					sbf.setLength(0);
 					
 					// (-)ve has more precedence over (+)ve
 					if(!operators.isEmpty() && operators.peek().equals("-"))
-						rpn.append(operators.pop());
+						rpn.add(operators.pop());
 				}				
 			}
 			
@@ -30,27 +32,27 @@ public class RPN {
 			else if(c==')'){
 				String p = operators.pop();
 				while(!p.equals("(")){
-					rpn.append(p);
+					rpn.add(p);
 					p = operators.pop();
 				}
 				// (-)ve has more precedence over (+)ve
 				if(!operators.isEmpty() && operators.peek().equals("-"))
-					rpn.append(operators.pop());
+					rpn.add(operators.pop());
 			}
 			else{
 				sbf.append(c);		
 			}
 		}
 		if(sbf.length()!=0){
-			rpn.append(sbf.toString());			
+			rpn.add(sbf.toString());			
 		}
 		
 		if(!operators.isEmpty()){
 			while(!operators.isEmpty())
-				rpn.append(operators.pop());
+				rpn.add(operators.pop());
 		}
 		
-		return rpn.toString();
+		return rpn;
 	}
 	
 	public static void main(String[] args) {
@@ -63,10 +65,9 @@ public class RPN {
 }
 
 /**
- * 	24+
-	23-4+
-	1452++3-+68++
-	1234
-	70-4+
-	2+(
+ * 	[2, 4, +]
+	[2, 3, -, 4, +]
+	[1, 4, 5, 2, +, +, 3, -, +, 6, 8, +, +]
+	[1234]
+	[7, 0, -, 4, +]
  */
