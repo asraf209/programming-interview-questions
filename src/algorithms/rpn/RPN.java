@@ -6,10 +6,11 @@ public class RPN {
 
 	private static String makeRPN(String s){
 		Stack<String> operators = new Stack<>();		
-		StringBuffer rpn = new StringBuffer();
-		StringBuffer sbf = new StringBuffer();
+		StringBuffer rpn = new StringBuffer();		// Output
+		StringBuffer sbf = new StringBuffer();		// Holds each number
 		
 		for(char c : s.toCharArray()){
+			// Initialize buffer to fetch next number
 			if(c==' ' || c=='(' || c==')' || c=='+' || c=='-'){
 				if(sbf.length()!=0){
 					rpn.append(sbf.toString());
@@ -58,6 +59,14 @@ public class RPN {
 		System.out.println(makeRPN("(1+(4+5+2)-3)+(6+8)"));
 		System.out.println(makeRPN("1234"));
 		System.out.println(makeRPN("(7)-(0)+(4)"));		
-	}
-
+	}	
 }
+
+/**
+ * 	24+
+	23-4+
+	1452++3-+68++
+	1234
+	70-4+
+	2+(
+ */
