@@ -1,14 +1,11 @@
 package algorithms.rpn;
 
-import java.util.ArrayList;
-import java.util.List;
 import java.util.Stack;
 
 public class RPN {
 
-	private static String convertToReversePolishNotation2(String s){
-		Stack<String> operators = new Stack<>();
-		//List<String> rpn = new ArrayList<>();
+	private static String makeRPN(String s){
+		Stack<String> operators = new Stack<>();		
 		StringBuffer rpn = new StringBuffer();
 		StringBuffer sbf = new StringBuffer();
 		
@@ -26,9 +23,7 @@ public class RPN {
 			
 			if(c==' ')	continue;							
 			else if(c=='(' || c=='+' || c=='-'){
-				// (-)ve has more precedence over (+)ve
-				//if(!operators.isEmpty() && operators.peek().equals("-"))
-					//rpn.add(operators.pop());
+				// (-)ve has more precedence over (+)ve				
 				operators.push(""+c);
 			}
 			else if(c==')'){
@@ -53,13 +48,16 @@ public class RPN {
 			while(!operators.isEmpty())
 				rpn.append(operators.pop());
 		}
-		System.out.println(rpn);
+		
 		return rpn.toString();
 	}
 	
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-
+		System.out.println(makeRPN("2+4"));
+		System.out.println(makeRPN("2-3+4"));
+		System.out.println(makeRPN("(1+(4+5+2)-3)+(6+8)"));
+		System.out.println(makeRPN("1234"));
+		System.out.println(makeRPN("(7)-(0)+(4)"));		
 	}
 
 }
