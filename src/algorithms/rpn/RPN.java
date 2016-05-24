@@ -19,7 +19,7 @@ public class RPN {
 					sbf.setLength(0);
 					
 					// (-)ve has more precedence over (+)ve
-					if(!operators.isEmpty() && operators.peek().equals("-"))
+					if(!operators.isEmpty() && operators.peek().equals("-"))				
 						rpn.add(operators.pop());
 				}				
 			}
@@ -60,7 +60,8 @@ public class RPN {
 		System.out.println(makeRPN("2-3+4"));
 		System.out.println(makeRPN("(1+(4+5+2)-3)+(6+8)"));
 		System.out.println(makeRPN("1234"));
-		System.out.println(makeRPN("(7)-(0)+(4)"));		
+		System.out.println(makeRPN("(7)-(0)+(4)"));
+		System.out.println(makeRPN("(7)+(0)+(4)"));		
 	}	
 }
 
