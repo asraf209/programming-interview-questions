@@ -52,6 +52,8 @@ public class MaxDiff {
 		System.out.println(findMaxDiff(new int[]{2, 3, 10, 1, 6, 4, 15}));  // minI:3, maxI:6 -> diff:14
 		
 		System.out.println(findMaxDiff(new int[]{2, 2, 10, 6, 4, 8, 1}));  	// minI:0, maxI:2 -> diff:8
+		
+		System.out.println(findMaxDiff(new int[]{7, 9, 5, 6, 3, 2}));  	// minI:0, maxI:2 -> diff:8
 	}
 
 }

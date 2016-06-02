@@ -1,12 +1,14 @@
-# Max Diff in an Array
+# Max Diff between two elements in an Array
 
-Given an array, find the maximum difference. Index of max number should be greater than that of min number. Return 0 otherwise.
+Given an integer array, find out the maximum difference between any two elements such that the larger elements appears after smaller one. 
+
+Return 0 if there are no such elements.
 
 ## Example
-{5, 1, 3, 4, 2} <br />
-Index of 5 is smaller than index of 1. So discard 5 and consider 4 as the max number. And thus return (4-1)=3
+{7, 9, 5, 6, 3, 2} <br />
+Return value should be 2; difference between 7 and 9
 
 
-{5, 4, 3, 2, 1} <br />
-For this case, index of any max number is smaller than that of min number. So return 0
+{2, 3, 10, 1, 6, 4, 15} <br />
+Return value should be 14; difference between 1 and 15
 
