@@ -1,4 +1,4 @@
-# Validate an Reverse Polish Notation (RPN) expression
+# Validate a Reverse Polish Notation
 
 Given an RPN expression, determine if its a correct one or not. You can assume all the numbers will be within 0-9 with basic operators [+, -, *, %]
 
