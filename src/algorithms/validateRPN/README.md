@@ -15,3 +15,6 @@ Invalid expression. Return false
 
 538*+ <br />
 This is 5+3*8, so return true 
+
+23+4 <br />
+(2+3)4 Invalid expression. Return false
