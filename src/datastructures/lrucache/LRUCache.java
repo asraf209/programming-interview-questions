@@ -70,6 +70,19 @@ public class LRUCache {
 		count --;
 	}
 	
+	private void addToHead(Node node){
+		if(isEmpty()){
+			head = node;
+			tail = head;
+		}
+		else{
+			node.next = head;
+			head.prev = node;
+			head = node;
+		}
+		count ++;
+	}
+	
 	public void set(int key, int value){
 		if(map.containsKey(key)){
 			Node node = map.get(key);
