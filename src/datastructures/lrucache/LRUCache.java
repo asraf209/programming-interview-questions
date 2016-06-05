@@ -38,11 +38,11 @@ public class LRUCache {
 	private void moveToHead(Node node){
 		if(node == null || count < 2)	return;		
 		
-		node.prev.next = node.next;		
-		if(node.next != null)
-			node.next.prev = node.prev;
-		else	// This is Tail
+		node.prev.next = node.next;				
+		if(node == tail)
 			tail = node.prev;		
+		else
+			node.next.prev = node.prev;
 		
 		node.next = head;
 		head.prev = node;
@@ -59,6 +59,16 @@ public class LRUCache {
 		}
 		return -1;
 	}	
+	
+	private void removeFromTail(){
+		if(isEmpty())	return;
+		tail = tail.prev;
+		if(tail == null)
+			head = tail;
+		else
+			tail.next = null;
+		count --;
+	}
 	
 	public void set(int key, int value){
 		if(map.containsKey(key)){
