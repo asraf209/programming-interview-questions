@@ -97,8 +97,21 @@ public class LRUCache {
 		}
 	}
 	
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+	@Override
+	public String toString(){
+		StringBuffer buffer = new StringBuffer();
+		buffer.append("Capacity: " + capcacity + "\n");
+		buffer.append("Count: " + count + "\n");
+		Node n = head;
+		while(n!=null){
+			buffer.append("(" + n.key + ", " + n.value + ") ");
+			n = n.next;
+		}
+		buffer.append("\n");
+		return buffer.toString();
+	}
+	
+	public static void main(String[] args) {		
 
 	}
 
