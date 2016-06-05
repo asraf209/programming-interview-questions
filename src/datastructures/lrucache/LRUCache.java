@@ -1,5 +1,8 @@
 package datastructures.lrucache;
 
+import java.util.HashMap;
+import java.util.Map;
+
 public class LRUCache {
 	class Node{
 		int key;
@@ -19,12 +22,14 @@ public class LRUCache {
 	int count;
 	Node head;
 	Node tail;
+	Map<Integer, Node> map;
 	
 	public LRUCache(int capacity){
 		this.capcacity = capacity;
 		this.count = 0;
 		this.head = null;
 		this.tail = null;
+		map = new HashMap<>();
 	}
 	
 	public boolean isEmpty()	{return this.count == 0; }
