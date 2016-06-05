@@ -36,7 +36,7 @@ public class LRUCache {
 	private boolean isFull()		{return this.count == this.capcacity; }
 	
 	private void moveToHead(Node node){
-		if(node == null || count < 2)	return;		
+		if(node == null || node == head)	return;		
 		
 		node.prev.next = node.next;				
 		if(node == tail)
@@ -49,19 +49,11 @@ public class LRUCache {
 		
 		head = node;
 	}
-	
-	
-	public int get(int key){
-		if(map.containsKey(key)){
-			Node node = map.get(key);
-			moveToHead(node);
-			return node.value;
-		}
-		return -1;
-	}	
-	
+			
 	private void removeFromTail(){
 		if(isEmpty())	return;
+		map.remove(tail.key);
+		
 		tail = tail.prev;
 		if(tail == null)
 			head = tail;
@@ -80,7 +72,17 @@ public class LRUCache {
 			head.prev = node;
 			head = node;
 		}
+		map.put(node.key, node);
 		count ++;
+	}
+	
+	public int get(int key){
+		if(map.containsKey(key)){
+			Node node = map.get(key);
+			moveToHead(node);
+			return node.value;
+		}
+		return -1;
 	}
 	
 	public void set(int key, int value){
@@ -90,10 +92,10 @@ public class LRUCache {
 			moveToHead(node);
 		}
 		else{
-			if(isFull())
-				removeFromTail();			
-			Node node = new Node(key, value);		
-			map.put(key, node);
+			if(isFull()){
+				removeFromTail();				
+			}
+			Node node = new Node(key, value);					
 			addToHead(node);			
 		}
 	}
@@ -113,25 +115,23 @@ public class LRUCache {
 	}
 	
 	public static void main(String[] args) {		
-		LRUCache cache = new LRUCache(5);
+		LRUCache cache = new LRUCache(2);				
+		cache.set(2, 1);
+		cache.set(2, 2);		
 		System.out.println(cache);
 		
-		cache.set(1, 100);
-		cache.set(2, 300);
-		cache.set(3, 300);
-		cache.set(4, 400);
-		cache.set(5, 500);
+		System.out.println(cache.get(2));				
+		System.out.println(cache);
+		
+		cache.set(1, 1);
+		cache.set(4, 1);
 		System.out.println(cache);
 		
 		System.out.println(cache.get(2));
-		System.out.println(cache.get(40));		
 		System.out.println(cache);
 		
-		cache.set(3, 123);
-		System.out.println(cache);
-		
-		cache.set(6, 600);
+		System.out.println(cache.get(4));
 		System.out.println(cache);
 	}
-
+// 2,[set(2,1),set(2,2),get(2),set(1,1),set(4,1),get(2)]
 }
