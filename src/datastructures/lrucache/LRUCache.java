@@ -46,9 +46,12 @@ public class LRUCache {
 	
 	private void moveToHead(Node node){
 		if(node == null || count < 2)	return;		
-		node.prev.next = node.next;
+		
+		node.prev.next = node.next;		
 		if(node.next != null)
 			node.next.prev = node.prev;
+		else	// This is Tail
+			tail = node.prev;		
 		
 		node.next = head;
 		head.prev = node;
