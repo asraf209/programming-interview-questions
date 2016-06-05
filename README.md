@@ -4,6 +4,7 @@ Helping people in preparing for Programming Interviews
 
 |#|Title|Category|
 |---|-----|---------|
+|6|[LRU Cache](./src/datastructures/lrucache)|Data Structure|
 |5|[Max Diff](./src/algorithms/maxdiff)|Algorithm|
 |4|[Validate RPN Expression](./src/algorithms/validateRPN)|Algorithm|
 |3|[Reverse Polish Notation(RPN)](./src/algorithms/rpn)|Algorithm|
