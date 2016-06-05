@@ -92,7 +92,8 @@ public class LRUCache {
 		else{
 			if(isFull())
 				removeFromTail();			
-			Node node = new Node(key, value);			
+			Node node = new Node(key, value);		
+			map.put(key, node);
 			addToHead(node);			
 		}
 	}
@@ -107,12 +108,30 @@ public class LRUCache {
 			buffer.append("(" + n.key + ", " + n.value + ") ");
 			n = n.next;
 		}
-		buffer.append("\n");
+		buffer.append("\n");		
 		return buffer.toString();
 	}
 	
 	public static void main(String[] args) {		
-
+		LRUCache cache = new LRUCache(5);
+		System.out.println(cache);
+		
+		cache.set(1, 100);
+		cache.set(2, 300);
+		cache.set(3, 300);
+		cache.set(4, 400);
+		cache.set(5, 500);
+		System.out.println(cache);
+		
+		System.out.println(cache.get(2));
+		System.out.println(cache.get(40));		
+		System.out.println(cache);
+		
+		cache.set(3, 123);
+		System.out.println(cache);
+		
+		cache.set(6, 600);
+		System.out.println(cache);
 	}
 
 }
