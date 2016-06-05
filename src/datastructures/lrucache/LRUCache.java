@@ -44,6 +44,18 @@ public class LRUCache {
 		return -1;
 	}
 	
+	private void moveToHead(Node node){
+		if(node == null || count < 2)	return;		
+		node.prev.next = node.next;
+		if(node.next != null)
+			node.next.prev = node.prev;
+		
+		node.next = head;
+		head.prev = node;
+		
+		head = node;
+	}
+	
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 
