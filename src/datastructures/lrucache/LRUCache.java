@@ -60,6 +60,19 @@ public class LRUCache {
 		return -1;
 	}	
 	
+	public void set(int key, int value){
+		if(map.containsKey(key)){
+			Node node = map.get(key);
+			node.value = value;
+			moveToHead(node);
+		}
+		else{
+			if(isFull())
+				removeFromTail();			
+			Node node = new Node(key, value);			
+			addToHead(node);			
+		}
+	}
 	
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
