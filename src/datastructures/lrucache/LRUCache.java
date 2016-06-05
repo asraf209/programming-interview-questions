@@ -35,6 +35,15 @@ public class LRUCache {
 	public boolean isEmpty()	{return this.count == 0; }
 	public boolean isFull()		{return this.count == this.capcacity; }
 			
+	public int get(int key){
+		if(map.containsKey(key)){
+			Node node = map.get(key);
+			moveToHead(node);
+			return node.value;
+		}
+		return -1;
+	}
+	
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 
