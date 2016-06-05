@@ -32,17 +32,8 @@ public class LRUCache {
 		map = new HashMap<>();
 	}
 	
-	public boolean isEmpty()	{return this.count == 0; }
-	public boolean isFull()		{return this.count == this.capcacity; }
-			
-	public int get(int key){
-		if(map.containsKey(key)){
-			Node node = map.get(key);
-			moveToHead(node);
-			return node.value;
-		}
-		return -1;
-	}
+	private boolean isEmpty()	{return this.count == 0; }
+	private boolean isFull()		{return this.count == this.capcacity; }
 	
 	private void moveToHead(Node node){
 		if(node == null || count < 2)	return;		
@@ -58,6 +49,17 @@ public class LRUCache {
 		
 		head = node;
 	}
+	
+	
+	public int get(int key){
+		if(map.containsKey(key)){
+			Node node = map.get(key);
+			moveToHead(node);
+			return node.value;
+		}
+		return -1;
+	}	
+	
 	
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
