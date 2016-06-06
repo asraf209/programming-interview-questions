@@ -13,7 +13,7 @@ public class SpiralMatrix {
 		int count = 0;
 		int r=0, c=0;
 		int dir = 0;			// 0-RIGHT, 1-DOWN, 2-LEFT, 3-RIGHT				
-		int SPIRALCOUNT=0;
+		int SPIRALCOUNT=0;		// # of spiral visited/soon to be visited
 		List<Integer> out = new ArrayList<>();
 		
 		while(count < m*n){
@@ -50,19 +50,30 @@ public class SpiralMatrix {
 					out.add(M[r][c]);
 					r--;
 				}
-				c++;								
+				r++;
+				c++;												
 				dir = 0;		// Go RIGHT
-			}
-			
+			}			
 			count ++;
-		}
-		
+		}		
 		return out;
 	}
 	
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
+		int[][] M1 = {
+				{1, 2, 3},
+				{4, 5, 6},
+				{7, 8, 9}
+		};
+		System.out.println(printSpiral(M1));
 		
+		int[][] M2 = {
+				{1, 2, 3, 4},
+				{5, 6, 7, 8},
+				{9, 10, 11, 12}
+		};
+		System.out.println(printSpiral(M2));
 	}
 
 }
