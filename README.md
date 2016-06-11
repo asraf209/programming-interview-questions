@@ -4,6 +4,7 @@ Helping people in preparing for Programming Interviews
 
 |#|Title|Category|
 |---|-----|---------|
+|8|[Longest Substring](./src/algorithms/longestsubstr)|Algorithm|
 |7|[Spiral Matrix](./src/algorithms/spiralmatrix)|Algorithm|
 |6|[LRU Cache](./src/datastructures/lrucache)|Data Structure|
 |5|[Max Diff](./src/algorithms/maxdiff)|Algorithm|
