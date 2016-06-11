@@ -5,7 +5,7 @@ package algorithms.longestsubstr;
  *
  */
 public class LongestSubstring {
-	public static int longestSubstring(String s){
+	public static int longestSubstring2(String s){
 		if(s==null || s.trim().isEmpty())	return 0;		
 		
 		s = s.trim();		
@@ -27,6 +27,37 @@ public class LongestSubstring {
 				chSet[index] = true;
 			}
 		}
+		System.out.println(s.substring(start, start+maxLength));
+		return maxLength;
+	}
+	
+	public static int longestSubstring(String s){
+		if(s==null || s.trim().isEmpty())	return 0;				
+		if(s.trim().length() < 2)	return 1;
+		
+		s = s.trim();				
+		int start = 0, tmpStart = 0;
+		int length = 1, maxLength = 1;
+		
+		for(int i=1; i<s.length(); i++){
+			if(s.charAt(i-1) == s.charAt(i)){
+				if(length > maxLength){
+					start = tmpStart;
+					maxLength = length;
+				}
+				tmpStart = i;
+				length = 1;
+			}
+			else{
+				length++;
+			}
+		}
+		
+		if(length > maxLength){
+			start = tmpStart;
+			maxLength = length;
+		}
+		
 		System.out.println(s.substring(start, start+maxLength));
 		return maxLength;
 	}
