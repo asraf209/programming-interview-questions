@@ -5,131 +5,54 @@ import java.util.Map;
 
 /**
  * Longest substring with non-repeating characters
- *
  */
 public class LongestSubstring {	
 	
 	/**
-	 * Work in section. While traversing each char, if it is already in the current stream,
-	 * then start another section right from that char.
-	 * Use Map to check repeating char in a stream
+	 * Sliding Window problem.
+	 * Maintain two pointers and find a window which has all unique char.
+	 * Use Map to check repeating char in a window
+	 * When you find a repeating char, walk the left pointer and remove all chars
+	 * which are unique. Next window will begin from current position(right)
 	 * 
 	 * @param s, input String
 	 * @return length of the non-repeating substring
-	 */
-	public static int longestSubstring2(String s){
-		if(s==null || s.trim().isEmpty())	return 0;		
-		
-		s = s.trim();
-		int start = 0;
-		int maxLength = 0;
-		Map<Character, Boolean> map = new HashMap<>();
-		
-		for(int i=0; i<s.length(); i++){
-			int tmpStart = i;
-			int length = 0;		
-			map.clear();
-			
-			for(int j=i; j<s.length(); j++){
-				if(map.containsKey(s.charAt(j))){				
-					if(length > maxLength){
-						start = tmpStart;
-						maxLength = length;
-					}
-					map.clear();
-					map.put(s.charAt(j), true);
-					tmpStart = j;
-					length = 1;
-				}
-				else{
-					length++;
-					map.put(s.charAt(j), true);
-				}
-			}
-			if(length > maxLength){
-				start = tmpStart;
-				maxLength = length;
-			}
-		}		
-		
-		System.out.println(s.substring(start, start+maxLength));
-		return maxLength;
-	}
-	
+	 */		
 	public static int longestSubstring(String s){
 		if(s==null || s.trim().isEmpty())	return 0;		
 		
-		s = s.trim();		
-		int start = 0, tmpStart = 0;
-		int length = 0, maxLength = 0;
-		boolean onLeft = false;
+		s = s.trim();	
+		int start = 0;
+		int left=0, right=0;
+		int maxLength=0;
 		Map<Character, Boolean> map = new HashMap<>();
 		
-		/**
-		 * Starting from left most position
-		 */
-		for(int i=0; i<s.length(); i++){			
-			if(map.containsKey(s.charAt(i))){				
-				if(length > maxLength){
-					start = tmpStart;
-					maxLength = length;
-					onLeft = true;
+		while(right < s.length()){
+			if(map.containsKey(s.charAt(right))){
+				if((right-left) > maxLength){
+					maxLength = right - left;
+					start = left;
 				}
-				map.clear();
-				map.put(s.charAt(i), true);
-				tmpStart = i;
-				length = 1;
+				while(s.charAt(left) != s.charAt(right)){
+					map.remove(s.charAt(left));
+					left++;
+				}
+				left++;
+				right++;
 			}
 			else{
-				length++;
-				map.put(s.charAt(i), true);
+				map.put(s.charAt(right), true);
+				right++;				
 			}
 		}
-		if(length > maxLength){
-			start = tmpStart;
-			maxLength = length;
-			onLeft = true;
+		if((s.length() - left) > maxLength){
+			start = left;
+			maxLength = s.length() - left;			
 		}
-		System.out.println(start + ", " + maxLength);
 		
-		/**
-		 * Starting from right most position
-		 */		
-		tmpStart = s.length()-1;
-		length = 0;
-		map.clear();
-		
-		for(int i=s.length()-1; i>=0; i--){			
-			if(map.containsKey(s.charAt(i))){				
-				if(length > maxLength){
-					start = tmpStart;
-					maxLength = length;
-					onLeft = false;
-				}
-				map.clear();
-				map.put(s.charAt(i), true);
-				tmpStart = i;
-				length = 1;
-			}
-			else{
-				length++;
-				map.put(s.charAt(i), true);
-			}
-		}
-		if(length > maxLength){
-			start = tmpStart;
-			maxLength = length;
-			onLeft = false;
-		}
-		System.out.println(start + ", " + maxLength);
-		
-		if(onLeft)
-			System.out.println(s.substring(start, start+maxLength));
-		else
-			System.out.println(s.substring(start-maxLength+1, start+1));
-		
+		System.out.println(s.substring(start, start+maxLength));
 		return maxLength;
-	}
+	}	
 	
 	public static void main(String[] args) {
 		System.out.println(longestSubstring("pwwke") + "\n");
