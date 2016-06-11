@@ -9,6 +9,14 @@ import java.util.Map;
  */
 public class LongestSubstring {	
 	
+	/**
+	 * Work in section. While traversing each char, if it is already in the current stream,
+	 * then start another section right from that char.
+	 * Use Map to check repeating char in a stream
+	 * 
+	 * @param s, input String
+	 * @return length of the non-repeating substring
+	 */
 	public static int longestSubstring(String s){
 		if(s==null || s.trim().isEmpty())	return 0;		
 		
