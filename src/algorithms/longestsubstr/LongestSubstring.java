@@ -17,7 +17,7 @@ public class LongestSubstring {
 	 * @param s, input String
 	 * @return length of the non-repeating substring
 	 */
-	public static int longestSubstring(String s){
+	public static int longestSubstring2(String s){
 		if(s==null || s.trim().isEmpty())	return 0;		
 		
 		s = s.trim();
@@ -54,13 +54,89 @@ public class LongestSubstring {
 		
 		System.out.println(s.substring(start, start+maxLength));
 		return maxLength;
-	}		
+	}
+	
+	public static int longestSubstring(String s){
+		if(s==null || s.trim().isEmpty())	return 0;		
+		
+		s = s.trim();		
+		int start = 0, tmpStart = 0;
+		int length = 0, maxLength = 0;
+		boolean onLeft = false;
+		Map<Character, Boolean> map = new HashMap<>();
+		
+		/**
+		 * Starting from left most position
+		 */
+		for(int i=0; i<s.length(); i++){			
+			if(map.containsKey(s.charAt(i))){				
+				if(length > maxLength){
+					start = tmpStart;
+					maxLength = length;
+					onLeft = true;
+				}
+				map.clear();
+				map.put(s.charAt(i), true);
+				tmpStart = i;
+				length = 1;
+			}
+			else{
+				length++;
+				map.put(s.charAt(i), true);
+			}
+		}
+		if(length > maxLength){
+			start = tmpStart;
+			maxLength = length;
+			onLeft = true;
+		}
+		System.out.println(start + ", " + maxLength);
+		
+		/**
+		 * Starting from right most position
+		 */		
+		tmpStart = s.length()-1;
+		length = 0;
+		map.clear();
+		
+		for(int i=s.length()-1; i>=0; i--){			
+			if(map.containsKey(s.charAt(i))){				
+				if(length > maxLength){
+					start = tmpStart;
+					maxLength = length;
+					onLeft = false;
+				}
+				map.clear();
+				map.put(s.charAt(i), true);
+				tmpStart = i;
+				length = 1;
+			}
+			else{
+				length++;
+				map.put(s.charAt(i), true);
+			}
+		}
+		if(length > maxLength){
+			start = tmpStart;
+			maxLength = length;
+			onLeft = false;
+		}
+		System.out.println(start + ", " + maxLength);
+		
+		if(onLeft)
+			System.out.println(s.substring(start, start+maxLength));
+		else
+			System.out.println(s.substring(start-maxLength+1, start+1));
+		
+		return maxLength;
+	}
 	
 	public static void main(String[] args) {
-		System.out.println(longestSubstring("pwwke"));
-		System.out.println(longestSubstring("abcabcd"));
-		System.out.println(longestSubstring("bbbb"));
-		System.out.println(longestSubstring("dvdf"));
+		System.out.println(longestSubstring("pwwke") + "\n");
+		System.out.println(longestSubstring("abcabcd") + "\n");
+		System.out.println(longestSubstring("bbbb") + "\n");
+		System.out.println(longestSubstring("dvdf") + "\n");
+		System.out.println(longestSubstring("asjrgapa") + "\n");
 	}
 
 }
