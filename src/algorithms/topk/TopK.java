@@ -50,7 +50,13 @@ public class TopK {
 	}
 	
 	public static void main(String[] args) {		
+		int[] nums1 = {2,2,1,1,1,3};
+		int k = 2;
+		System.out.println(findTopKElements(nums1, k));
 		
+		int[] nums2 = {4,1,-1,2,-1,2,3};
+		k = 2;
+		System.out.println(findTopKElements(nums2, k));
 	}
 
 }
