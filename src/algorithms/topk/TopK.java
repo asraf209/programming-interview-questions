@@ -12,7 +12,7 @@ import java.util.Map.Entry;
 public class TopK {
 	
 	public static List<Integer> findTopKElements(int[] nums, int k){
-		if(nums==null || nums.length < 1)	return new ArrayList<Integer>();
+		if(nums==null || nums.length < 1 || k > nums.length)	return null;
 		
 		Map<Integer, Integer> map = new HashMap<>();
 		for(int n : nums){
@@ -35,10 +35,12 @@ public class TopK {
 		}
 		System.out.println(queue);
 		
+		if(k > queue.size())	return null;
+		
 		List<Integer> retList = new ArrayList<>();
 		Iterator<Entry<Integer, Integer>> itr = queue.iterator();
 		int count=0;
-		
+				
 		while(count<k && itr.hasNext()){
 			retList.add(itr.next().getKey());			
 			count++;
@@ -48,7 +50,7 @@ public class TopK {
 	}
 	
 	public static void main(String[] args) {		
-
+		
 	}
 
 }
