@@ -36,6 +36,13 @@ public class TopK {
 		System.out.println(queue);
 		
 		List<Integer> retList = new ArrayList<>();
+		Iterator<Entry<Integer, Integer>> itr = queue.iterator();
+		int count=0;
+		
+		while(count<k && itr.hasNext()){
+			retList.add(itr.next().getKey());			
+			count++;
+		}
 				
 		return retList;
 	}
