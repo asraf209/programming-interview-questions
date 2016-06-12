@@ -11,6 +11,8 @@ public class Heap {
 		 *  You can also create a Queue without specifying SIZE and Comparator
 		 *  It will create an Queue with 11 size and will work as MinHeap by default
 		 *  PriorityQueue<Integer> minHeap = new PriorityQueue<>()
+		 *  
+		 *  Complexity: O(log n), same as regular Heap if you make out of an Array
 		 */
 		PriorityQueue<Integer> minHeap = new PriorityQueue<Integer>(SIZE, new Comparator<Integer>() {
 			@Override
