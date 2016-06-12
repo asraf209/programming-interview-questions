@@ -1,2 +1,2 @@
 # Heap using PriorityQueue
-Make Max/min Heap using Java's Priority Queue
+Make Max/Min Heap using Java's Priority Queue

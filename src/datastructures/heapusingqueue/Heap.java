@@ -4,7 +4,14 @@ import java.util.Comparator;
 import java.util.PriorityQueue;
 
 public class Heap {
-	public static void makeMinHeap(int[] a, int SIZE){
+	
+	public static void makeMinHeap(int[] a, int SIZE){		
+		/**
+		 *  SIZE - initial size, which can be extended further if add more items
+		 *  You can also create a Queue without specifying SIZE and Comparator
+		 *  It will create an Queue with 11 size and will work as MinHeap by default
+		 *  PriorityQueue<Integer> minHeap = new PriorityQueue<>()
+		 */
 		PriorityQueue<Integer> minHeap = new PriorityQueue<Integer>(SIZE, new Comparator<Integer>() {
 			@Override
 			public int compare(Integer o1, Integer o2) {
