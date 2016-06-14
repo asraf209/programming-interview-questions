@@ -2,5 +2,15 @@
 Do it in place.
 
 ## Example
-Input: "Hello World"
-Output: "olleH dlroW"
+
+###Input: 
+"HelloWorld"	<br />
+"Hello World"	<br />
+"I 	ABC	DEF  GHR	"	<br />
+" ABC	DEF  GHR "		<br />
+
+###Output: 
+"dlroWolleH" 	<br />
+"olleH dlroW"	<br />
+"I 	CBA	FED  RHG	"	<br /> 
+" CBA	FED  RHG"	<br />
