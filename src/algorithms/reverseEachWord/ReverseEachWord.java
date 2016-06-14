@@ -12,6 +12,7 @@ public class ReverseEachWord {
 			char tmp = sentence[s];
 			sentence[s] = sentence[e];
 			sentence[e] = tmp;
+			s++; e--;
 		}
 	}
 
