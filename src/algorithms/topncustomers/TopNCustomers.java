@@ -2,14 +2,13 @@ package algorithms.topncustomers;
 
 import java.util.Comparator;
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
 import java.util.Map.Entry;
 import java.util.PriorityQueue;
 
 public class TopNCustomers {
 
-	public static List<String> findTopNCustomer(String[] names, int[] expenses, int N){
+	public static Object[] findTopNCustomer(String[] names, int[] expenses, int N){
 		if(names==null || names.length==0 || expenses==null || expenses.length==0)
 			return null;
 		if(names.length!=expenses.length)	return null;
@@ -20,8 +19,7 @@ public class TopNCustomers {
 				expenseInfo.put(names[i], expenseInfo.get(names[i])+expenses[i]);
 			else
 				expenseInfo.put(names[i], expenses[i]);
-		}
-		System.out.println("Expense Info: " + expenseInfo);
+		}		
 		
 		PriorityQueue<Entry<String, Integer>> heap = new PriorityQueue<>(N, new Comparator<Entry<String, Integer>>() {
 			@Override
@@ -31,19 +29,24 @@ public class TopNCustomers {
 		});
 		
 		for(Entry<String, Integer> customer : expenseInfo.entrySet()){
+			if(heap.size() == N)
+				heap.poll();
 			heap.offer(customer);
-		}
-		System.out.println(heap);
+		}		
 		
-		return null;
+		return heap.toArray();
 	}
 	
 	public static void main(String[] args) {
-		int N = 3;
+		int N = 2;
 		String[] names = {"bob", "sam", "smith", "alan", "sam", "sam", "kobi", "sam", "bob", "alan"};
 		int[] expenses = {100, 200, 300, 400, 500, 600, 700, 800, 900, 1000};
 		
-		System.out.println(findTopNCustomer(names, expenses, N));
+		Object[] retMap = findTopNCustomer(names, expenses, N);
+		System.out.println("Top " + N + ": ");
+		for(Object item : retMap){
+			System.out.println(item);
+		}
 	}
 
 }
