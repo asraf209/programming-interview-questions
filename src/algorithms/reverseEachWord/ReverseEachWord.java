@@ -8,10 +8,16 @@ public class ReverseEachWord {
 		
 		char[] chars = sentence.toCharArray();
 		int s=0, e=0;
+		
+		/**
+		 * Find each Word and then reverse that 
+		 */
 		while(e<chars.length){
 			if(chars[e]==' ' || chars[e]=='\t'){
-				if((e-s)>0)	
+				if((e-s)>0){
+					// Got a word
 					reverse(chars, s, e-1);
+				}
 				s = e+1;
 			}
 			e++;
@@ -26,7 +32,10 @@ public class ReverseEachWord {
 	private static void reverse(char[] sentence, int s, int e){
 		if(sentence==null || sentence.length<2)
 			return;
-
+		
+		/**
+		 * Swap characters to reverse a Word
+		 */
 		while(s<e){
 			char tmp = sentence[s];
 			sentence[s] = sentence[e];
@@ -40,7 +49,10 @@ public class ReverseEachWord {
 	 * @param args
 	 */
 	public static void main(String[] args) {
-
+		System.out.println(reverseEachWordInSentence("HelloWorld"));
+		System.out.println(reverseEachWordInSentence("Hello World"));
+		System.out.println(reverseEachWordInSentence("I 	ABC	DEF  GHR "));
+		System.out.println(reverseEachWordInSentence(" ABC	DEF  GHR "));
 	}
 
 }
