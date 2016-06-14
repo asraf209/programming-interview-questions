@@ -4,6 +4,7 @@ Helping people in preparing for Programming Interviews
 
 |#|Title|Category|
 |---|-----|---------|
+|11|[Top N Customers](./src/algorithms/topNcustomers)|Algorithm|
 |10|[Top K Items](./src/algorithms/topk)|Algorithm|
 |9|[Heap using PriorityQueue](./src/datastructures/heapusingqueue)|Data Structure|
 |8|[Longest Substring](./src/algorithms/longestsubstr)|Algorithm|
