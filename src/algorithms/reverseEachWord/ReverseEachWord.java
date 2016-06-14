@@ -4,23 +4,24 @@ package algorithms.reverseEachWord;
 
 public class ReverseEachWord {
 
+	private static void reverse(char[] sentence, int s, int e){
+		if(sentence==null || sentence.length<2)
+			return;
 
-
-	/**
-
-	 * @param args
-
-	 */
-
-	public static void main(String[] args) {
-
-		// TODO Auto-generated method stub
-
-
-
+		while(s<e){
+			char tmp = sentence[s];
+			sentence[s] = sentence[e];
+			sentence[e] = tmp;
+		}
 	}
 
 
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+
+	}
 
 }
 
