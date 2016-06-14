@@ -6,6 +6,14 @@ import java.util.Map;
 import java.util.Map.Entry;
 import java.util.PriorityQueue;
 
+/**
+ * We will be using HashMap and Heap of size N to solve this problem.
+ * 	1. Sum up expenses, made by individual customer
+ * 	2. Maintain a MinHeap of size N
+ * 
+ * @author asraful
+ *
+ */
 public class TopNCustomers {
 
 	public static Object[] findTopNCustomer(String[] names, int[] expenses, int N){
@@ -13,6 +21,9 @@ public class TopNCustomers {
 			return null;
 		if(names.length!=expenses.length)	return null;
 		
+		/**
+		 * Sum up expenses, made by individual customer
+		 */
 		Map<String, Integer> expenseInfo = new HashMap<>();
 		for(int i=0; i<names.length; i++){
 			if(expenseInfo.containsKey(names[i]))
@@ -21,6 +32,10 @@ public class TopNCustomers {
 				expenseInfo.put(names[i], expenses[i]);
 		}		
 		
+		/**
+		 * We are using MinHeap. Because it helps us to remove the smaller expenses.
+		 * Ultimately leaving the larger values in the list
+		 */
 		PriorityQueue<Entry<String, Integer>> heap = new PriorityQueue<>(N, new Comparator<Entry<String, Integer>>() {
 			@Override
 			public int compare(Entry<String, Integer> o1, Entry<String, Integer> o2) {
@@ -28,6 +43,9 @@ public class TopNCustomers {
 			}
 		});
 		
+		/**
+		 * Maintain the Heap size to N
+		 */
 		for(Entry<String, Integer> customer : expenseInfo.entrySet()){
 			if(heap.size() == N)
 				heap.poll();
