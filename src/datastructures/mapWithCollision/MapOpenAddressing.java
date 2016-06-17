@@ -18,12 +18,13 @@ public class MapOpenAddressing {
 			return map[hash].value;
 		else{
 			int pointer = (hash + 1) % SIZE;
-			while(pointer!=hash && map[pointer].key!=key){
+			while(pointer!=hash && map[pointer]!=null){
+				if(map[pointer].key==key)
+					return map[pointer].value;
 				pointer = (pointer + 1)%SIZE;
 			}
 			
-			if(pointer==hash)	return Integer.MIN_VALUE;			
-			return map[pointer].value;
+			return Integer.MIN_VALUE;						
 		}				
 	}
 	
