@@ -10,4 +10,9 @@ public class Entry {
 		this.value = value;
 		this.next = null;
 	}
+
+	@Override
+	public String toString() {
+		return "[" + key + ", " + value + ", " + next + "]";
+	}
 }
