@@ -32,16 +32,21 @@ public class MapChaining {
 		if(map[hash] == null)
 			map[hash] = new Entry(key, value);		
 		else{
-			Entry head = map[hash];
-			while(head.next != null){
+			Entry head = map[hash];			
+			while(head != null){				
 				if(head.key == key){
 					head.value = value;
-					return;
+					break;
 				}
+				
+				if(head.next == null){
+					head.next = new Entry(key, value);
+					break;
+				}
+				
 				head = head.next;
 			}
-			
-			head.next = new Entry(key, value);
+						
 		}
 	}	
 	
@@ -56,7 +61,7 @@ public class MapChaining {
 	}
 
 	public static void main(String[] args) {
-		int SIZE = 10;
+		int SIZE = 3;
 		MapChaining map = new MapChaining(SIZE);
 		
 		map.set(1, 100);
@@ -64,6 +69,18 @@ public class MapChaining {
 		map.set(3, 300);
 		map.set(1, 1000);
 		System.out.println(map);
+		
+		map.set(3, 3000);
+		map.set(5, 5000);
+		map.set(6, 6000);
+		System.out.println(map);
+		
+		System.out.println(map.get(10));	// NOT FOUND
+		System.out.println(map.get(1));		// 1000
+		System.out.println(map.get(2));		// 200
+		System.out.println(map.get(3));		// 3000
+		System.out.println(map.get(5));		// 5000
+		System.out.println(map.get(6));		// 6000
 	}
 
 }
