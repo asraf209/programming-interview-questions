@@ -1,8 +1,5 @@
 package algorithms.spiralMatrixII;
 
-import java.util.ArrayList;
-import java.util.List;
-
 public class SpiralMatrixII {
 	
 	public static int[][] generateSpiralMatrix(int n){
@@ -62,8 +59,22 @@ public class SpiralMatrixII {
 		return M;
 	}
 	
+	private static void printMatrix(int[][] M){
+		for(int r=0; r<M.length; r++){
+			for(int c=0; c<M[0].length; c++){
+				System.out.print(M[r][c] + "   ");
+			}
+			System.out.println();
+		}
+		System.out.println();
+	}
+	
 	public static void main(String[] args) {		
+		int[][] out = generateSpiralMatrix(3);
+		printMatrix(out);
 		
+		out = generateSpiralMatrix(4);
+		printMatrix(out);
 	}
 
 }
