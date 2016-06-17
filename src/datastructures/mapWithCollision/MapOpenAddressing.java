@@ -50,9 +50,35 @@ public class MapOpenAddressing {
 		}				
 	}
 	
+	@Override
+	public String toString() {
+		StringBuffer buffer = new StringBuffer();
+		for(Entry entry : map)
+			buffer.append(entry);
+		return buffer.toString();
+	}
+	
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-
+		int SIZE = 3;
+		MapOpenAddressing map = new MapOpenAddressing(SIZE);
+		
+		map.set(1, 100);
+		map.set(2, 200);
+		map.set(3, 300);
+		map.set(1, 1000);
+		System.out.println(map);
+		
+		map.set(3, 3000);
+		map.set(5, 5000);
+		map.set(6, 6000);
+		System.out.println(map);
+		
+		System.out.println(map.get(10));	// NOT FOUND
+		System.out.println(map.get(1));		// 1000
+		System.out.println(map.get(2));		// 200
+		System.out.println(map.get(3));		// 3000
+		System.out.println(map.get(5));		// NOT FOUND
+		System.out.println(map.get(6));		// NOT FOUND
 	}
 
 }
