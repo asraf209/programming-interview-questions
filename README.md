@@ -4,7 +4,6 @@ Helping people in preparing for Programming Interviews
 
 |#|Title|Category|
 |---|-----|---------|
-
 |13|[Reverse Word in a Sentence](./src/algorithms/reverseEachWord)|Algorithm|
 |12|[Top N Customers](./src/algorithms/topNcustomers)|Algorithm|
 |11|[Top K Items](./src/algorithms/topk)|Algorithm|
