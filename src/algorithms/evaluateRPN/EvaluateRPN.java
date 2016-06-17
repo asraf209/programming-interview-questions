@@ -44,7 +44,8 @@ public class EvaluateRPN {
 	}
 	
 	public static void main(String[] args) {	
-		
+		String[] expr = {"4", "13", "5", "/", "+"}; //{"2", "1", "+", "3", "*"};
+		System.out.println(evaluate(expr));
 	}
 
 }
