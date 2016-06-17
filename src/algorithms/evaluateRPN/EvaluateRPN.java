@@ -4,39 +4,39 @@ import java.util.Stack;
 
 public class EvaluateRPN {
 	
-	public static int evaluate(char[] expr){
+	public static int evaluate(String[] expr){
 		if(expr == null || expr.length==0)	return 0;
 		
 		int a, b;
 		Stack<Integer> stack = new Stack<Integer>();		
-		for(char ch : expr){
-			switch(ch){
-				case '/':
+		for(String s : expr){
+			switch(s){
+				case "/":
 					b = stack.pop();
 					a = stack.pop();
 					stack.push(a/b);
 					break;
 					
-				case '*':
+				case "*":
 					b = stack.pop();
 					a = stack.pop();
 					stack.push(a*b);
 					break;
 					
-				case '+':
+				case "+":
 					b = stack.pop();
 					a = stack.pop();
 					stack.push(a+b);
 					break;
 					
-				case '-':
+				case "-":
 					b = stack.pop();
 					a = stack.pop();
 					stack.push(a-b);
 					break;
 					
 				default:
-					stack.push(ch - '0');
+					stack.push(Integer.parseInt(s));
 					break;
 			}					
 		}
@@ -44,7 +44,7 @@ public class EvaluateRPN {
 	}
 	
 	public static void main(String[] args) {	
-
+		
 	}
 
 }
