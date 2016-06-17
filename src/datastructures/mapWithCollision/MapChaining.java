@@ -25,6 +25,23 @@ public class MapChaining {
 		return Integer.MIN_VALUE;
 	}
 	
+	public void set(int key, int value){
+		int hash = (key % SIZE);
+		if(map[hash] == null)
+			map[hash] = new Entry(key, value);
+		
+		Entry head = map[hash];
+		while(head.next != null){
+			if(head.key == key){
+				head.value = value;
+				return;
+			}
+			head = head.next;
+		}
+		
+		head.next = new Entry(key, value);
+	}	
+	
 	public static void main(String[] args) {
 		int SIZE = 10;
 		MapChaining map = new MapChaining(SIZE);
