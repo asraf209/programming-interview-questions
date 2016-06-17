@@ -9,6 +9,11 @@ public class MapOpenAddressing {
 		map = new Entry[this.SIZE];
 	}
 	
+	/**
+	 * O(n); n = Size of the Map 
+	 * @param key
+	 * @return
+	 */
 	public int get(int key){
 		int hash = (key % SIZE);
 		if(map[hash] == null)
@@ -28,6 +33,11 @@ public class MapOpenAddressing {
 		}				
 	}
 	
+	/**
+	 * O(n); n = Size of the Map
+	 * @param key
+	 * @param value
+	 */
 	public void set(int key, int value){
 		int hash = (key % SIZE);
 		if(map[hash] == null)
