@@ -1,4 +1,4 @@
-package algorithms.spiralmatrix;
+package algorithms.spiralMatrix;
 
 import java.util.ArrayList;
 import java.util.List;
