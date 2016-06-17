@@ -1,7 +1,5 @@
 package datastructures.mapWithCollision;
 
-import java.util.Arrays;
-
 public class MapChaining {
 	
 	private int SIZE;
@@ -12,6 +10,11 @@ public class MapChaining {
 		map = new Entry[this.SIZE];
 	}
 	
+	/**
+	 * O(m); m = Size of the list in a particular key during collision 
+	 * @param key
+	 * @return
+	 */
 	public int get(int key){
 		int hash = (key % SIZE);
 		if(map[hash] == null)
@@ -27,6 +30,11 @@ public class MapChaining {
 		return Integer.MIN_VALUE;
 	}
 	
+	/**
+	 * O(m); m = Size of the list in a particular key during collision
+	 * @param key
+	 * @param value
+	 */
 	public void set(int key, int value){
 		int hash = (key % SIZE);
 		if(map[hash] == null)
