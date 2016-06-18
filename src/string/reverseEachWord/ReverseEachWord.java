@@ -1,4 +1,4 @@
-package algorithms.reverseEachWord;
+package string.reverseEachWord;
 
 public class ReverseEachWord {
 

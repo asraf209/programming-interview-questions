@@ -1,4 +1,4 @@
-package algorithms.longestsubstr;
+package string.longestsubstr;
 
 import java.util.HashMap;
 import java.util.Map;
