@@ -1,4 +1,4 @@
-package algorithms.maxdiff;
+package array.maxdiff;
 
 public class MaxDiff {		
 	

@@ -1,4 +1,4 @@
-package algorithms.spiralMatrixII;
+package array.spiralMatrixII;
 
 public class SpiralMatrixII {
 	
