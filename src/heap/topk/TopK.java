@@ -1,4 +1,4 @@
-package algorithms.topk;
+package heap.topk;
 
 import java.util.ArrayList;
 import java.util.Comparator;

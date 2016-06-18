@@ -1,4 +1,4 @@
-package algorithms.topNcustomers;
+package heap.topNcustomers;
 
 import java.util.Comparator;
 import java.util.HashMap;
