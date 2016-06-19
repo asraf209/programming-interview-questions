@@ -4,6 +4,7 @@ Helping people in preparing for Programming Interviews
 
 |#|Title|Category|
 |---|-----|---------|
+|20|[Reverse a LinkedList](./src/linkedlist/reverseList)|LinkedList|
 |19|[Permute Numbers](./src/array/permutations)|Array|
 |18|[String Permutations](./src/string/permutations)|String|
 |17|[Merge Two Sorted Arrays](./src/array/merge2SortedArrays)|Array|
