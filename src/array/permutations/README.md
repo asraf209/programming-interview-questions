@@ -15,4 +15,4 @@ Given a collection of distinct numbers, return all possible permutations.
   [3,2,1]	<br />
 ]
 
-./src/string/permutations/permutations.gif
+[Image](./src/string/permutations/permutations.gif)
