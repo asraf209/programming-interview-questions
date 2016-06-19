@@ -1,5 +1,5 @@
 # Find path in a Graph
-Find a path between two nodes in an undirected Graph, if there is any. Also print the path
+Find a path between two nodes in an directed Graph, if there is any. Also print the path
 
 ## Example
 G				<br />
