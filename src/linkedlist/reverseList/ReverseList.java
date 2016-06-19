@@ -12,6 +12,12 @@ public class ReverseList {
 		}
 	}
 	
+	/**
+	 * Time: O(2n)
+	 * Space: O(n)
+	 * @param head
+	 * @return
+	 */
 	public Node reverseListWithExtraSpace(Node head){
 		if(head == null || head.next==null)
 			return head;
@@ -37,12 +43,44 @@ public class ReverseList {
 		return out;
 	}
 	
+	/**
+	 * Time: O(n)
+	 * Space: O(1)
+	 * @param head
+	 * @return
+	 */
+	public Node reverseListWithoutExtraSpace(Node head){
+		if(head == null || head.next==null)
+			return head;
+				
+		Node curr = head.next;
+		Node newTail = head;
+		newTail.next = null;
+		Node newHead = newTail;
+		
+		while(curr!=null){
+			Node tmp = curr;
+			curr = curr.next;
+			
+			if(newHead==newTail){
+				newHead = tmp;				
+				newHead.next = newTail;
+			}
+			else{							
+				tmp.next = newHead;
+				newHead = tmp;
+			}
+		}
+		
+		return newHead;
+	}
+	
 	public void printList(Node head){
 		while(head!=null){
 			System.out.print(head.value + "->");
 			head = head.next;
 		}
-		System.out.println("NULL \n");
+		System.out.println("NULL");
 	}
 	
 	public Node makeAList(int[] a){
@@ -64,11 +102,17 @@ public class ReverseList {
 	public static void main(String[] args) {
 		int[] a = {1, 2, 3, 4, 5};
 		ReverseList obj = new ReverseList();
-		Node head = obj.makeAList(a);
-		obj.printList(head);
+		Node head1 = obj.makeAList(a);
+		obj.printList(head1);		
+		head1 = obj.reverseListWithExtraSpace(head1);
+		obj.printList(head1);
 		
-		head = obj.reverseListWithExtraSpace(head);
-		obj.printList(head);
+		System.out.println();
+		
+		Node head2 = obj.makeAList(a);
+		obj.printList(head2);
+		head2 = obj.reverseListWithoutExtraSpace(head2);
+		obj.printList(head2);
 	}
 
 }
