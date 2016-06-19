@@ -2,7 +2,7 @@
 
 Given a collection of distinct numbers, return all possible permutations.
 
-## Example,
+## Example
 
 [1,2,3] have the following permutations:
 
@@ -15,4 +15,4 @@ Given a collection of distinct numbers, return all possible permutations.
   [3,2,1]	<br />
 ]
 
-[Image](./src/string/permutations/permutations.gif)
+[Image](../../string/permutations/permutations.gif)
