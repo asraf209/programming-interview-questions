@@ -10,3 +10,11 @@ Input: ar1[] = {1, 5, 9, 10, 15, 20}; <br />
        
 Output: ar1[] = {1, 2, 3, 5, 8, 9}	<br />
         ar2[] = {10, 13, 15, 20}  
+
+## Time Complexity
+First array should always contain smaller elements than the second one. 
+So, if Second[start] < First[end] then swap them and sort individual Array. This will happen untill size(second array)
+
+O(m*(n+m))					<br />
+n - Size of First Array		<br />
+m - Size of Second Array        
