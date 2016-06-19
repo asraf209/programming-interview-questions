@@ -18,3 +18,5 @@ So, if Second[start] < First[end] then swap them and sort individual Array. This
 O(m*(n+m))					<br />
 n - Size of First Array		<br />
 m - Size of Second Array        
+
+If extra space was allowed, then it could be solved in O(n+m) time. It is the MERGE step of a merge sort
