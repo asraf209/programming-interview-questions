@@ -29,7 +29,7 @@ public class Graph {
 		if(map.containsKey(node))
 			return map.get(node);
 		else
-			return null;
+			return new ArrayList<>();
 	}
 	
 	public boolean isPresent(String node){
