@@ -13,6 +13,10 @@ D		F		<br />
   \   /			<br />
     J			<br />
 
+
+Find the above graph in image format: ./graph.jpg
+
+
 Source: G				<br />
 Destination: J			<br />
 Output: G->A->C->D->J	<br />
