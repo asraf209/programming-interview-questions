@@ -6,32 +6,39 @@ import java.util.List;
 import java.util.Map;
 
 public class Graph {
-	Map<String, List<String>> graph;	
+	Map<String, List<String>> map;	
 	
 	public Graph(){
-		graph = new HashMap<>();
+		map = new HashMap<>();
 	}
 	
 	public void addToGraph(String parent, String child){
-		if(graph.containsKey(parent)){
-			List<String> children = graph.get(parent);
+		List<String> children;
+		if(map.containsKey(parent)){
+			children = map.get(parent);
 			children.add(child);
 		}
 		else{
-			List<String> children = new ArrayList<>();
-			children.add(child);
+			children = new ArrayList<>();
+			children.add(child);			
 		}
+		map.put(parent, children);
 	}
 	
 	public List<String> getAdjacentNodes(String node){
-		if(graph.containsKey(node))
-			return graph.get(node);
+		if(map.containsKey(node))
+			return map.get(node);
 		else
 			return null;
 	}
 	
 	public boolean isPresent(String node){
-		if(graph.containsKey(node))	return true;
+		if(map.containsKey(node))	return true;
 		else	return false;
+	}
+
+	@Override
+	public String toString() {
+		return "Graph [map=" + map + "]";
 	}
 }
