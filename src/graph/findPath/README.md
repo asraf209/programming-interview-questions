@@ -6,12 +6,12 @@ G				<br />
 |				<br />
 A - B			<br />
 |				<br />
-C - E -  K		<br />
-\		 /		<br />
- D		 F		<br />
- \	    /		<br />
-   \   /			<br />
-     J			<br />
+C - E - K		<br />
+|		|		<br />
+D		F		<br />
+\		/		<br />
+  \   /			<br />
+    J			<br />
 
 Source: G				<br />
 Destination: J			<br />
