@@ -4,6 +4,7 @@ Helping people in preparing for Programming Interviews
 
 |#|Title|Category|
 |---|-----|---------|
+|18|[String Permutations](./src/string/permutations)|String|
 |17|[Merge Two Sorted Arrays](./src/array/merge2SortedArrays)|Array|
 |16|[Find path in a Graph](./src/graph/findPath)|Graph Traversal|
 |15|[HashMap with Collisions](./src/datastructures/mapWithCollision)|Data Structure|
