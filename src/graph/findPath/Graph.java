@@ -12,7 +12,7 @@ public class Graph {
 		map = new HashMap<>();
 	}
 	
-	public void addToGraph(String parent, String child){
+	public void addAnEdge(String parent, String child){
 		List<String> children;
 		if(map.containsKey(parent)){
 			children = map.get(parent);

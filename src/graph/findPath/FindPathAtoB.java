@@ -11,12 +11,21 @@ import java.util.Set;
 
 public class FindPathAtoB {
 	
+	/**
+	 * BFS algorithm using Queue. We can also use a list instead 
+	 * Time: O(V+E)
+	 * Space: O(V)
+	 * @param g
+	 * @param src
+	 * @param dest
+	 * @return
+	 */
 	public static List<String> findPath(Graph g, String src, String dest){
 		if(g==null || src==null || dest==null)	return null;
 		if(!g.isPresent(src) && !g.isPresent(dest))	return null;
 		
-		Set<String> visited = new HashSet<>();		
-		Queue<String> queue = new LinkedList<>();
+		Set<String> visited = new HashSet<>();		// Track nodes that are already been visited
+		Queue<String> queue = new LinkedList<>();	// Applying BFS 
 		/**
 		 * Map<u, v>: Node u has been reached by following a path via v
 		 * This will be used for printing the path
@@ -29,12 +38,12 @@ public class FindPathAtoB {
 			String v = queue.poll();			
 			for(String u : g.getAdjacentNodes(v)){
 				if(!visited.contains(u)){
-					if(dest.equals(u)){
+					if(dest.equals(u)){			// Found destination Node
 						map.put(u, v);
 						isFound = true;
 						break;
 					}
-					else{
+					else{						// If not, put it in the path Map and in the Queue to explore further
 						map.put(u, v);
 						queue.add(u);						
 					}
@@ -61,18 +70,20 @@ public class FindPathAtoB {
 	
 	public static void main(String[] args) {	
 		Graph graph = new Graph();
-		graph.addToGraph("G", "A");
-		graph.addToGraph("A", "B");
-		graph.addToGraph("A", "C");
-		graph.addToGraph("C", "D");
-		graph.addToGraph("C", "E");
-		graph.addToGraph("D", "J");
-		graph.addToGraph("E", "K");
-		graph.addToGraph("K", "F");
-		graph.addToGraph("F", "J");
+		graph.addAnEdge("G", "A");
+		graph.addAnEdge("A", "B");
+		graph.addAnEdge("A", "C");
+		graph.addAnEdge("C", "D");
+		graph.addAnEdge("C", "E");
+		graph.addAnEdge("D", "J");
+		graph.addAnEdge("E", "K");
+		graph.addAnEdge("K", "F");
+		graph.addAnEdge("F", "J");
 		System.out.println(graph);
 		
 		System.out.println("G to J: " + findPath(graph, "G", "J"));
-		
+		System.out.println("G to J: " + findPath(graph, "A", "J"));
+		System.out.println("G to J: " + findPath(graph, "K", "J"));
+		System.out.println("G to J: " + findPath(graph, "Z", "J"));
 	}
 }
