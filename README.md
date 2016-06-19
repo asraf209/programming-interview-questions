@@ -4,6 +4,7 @@ Helping people in preparing for Programming Interviews
 
 |#|Title|Category|
 |---|-----|---------|
+|16|[Find path in a Graph](./src/graph/findPath)|Graph Traversal|
 |15|[HashMap with Collisions](./src/datastructures/mapWithCollision)|Data Structure|
 |14|[Reverse Word in a Sentence](./src/string/reverseEachWord)|String|
 |13|[Top N Customers](./src/heap/topNcustomers)|Heap|
