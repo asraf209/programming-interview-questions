@@ -4,16 +4,13 @@ public class LockerLocations {
 	
 	/**
 	 * Compute Distance form current (x, y) to the (lockerX, lockerY)
-	 * @param r
-	 * @param c
-	 * @param X
-	 * @param Y
-	 * @return
+	 * Locker positions (X, Y) are in [1-9] Range. 
+	 * So you have to deduct 1 from each of their values
 	 */
 	private static int distance(int r, int c, int[]X, int[]Y){
 		int minDistance = Integer.MAX_VALUE;
 		for(int i=0; i<X.length; i++){
-			int distance = Math.abs(r+1-X[i]) + Math.abs(c+1-Y[i]);	// Row/Column starts from 0 
+			int distance = Math.abs(r-(Y[i]-1)) + Math.abs(c-(X[i]-1));	// Row/Column starts from 0 
 			minDistance = Math.min(minDistance, distance);
 		}
 		return minDistance;
@@ -35,7 +32,7 @@ public class LockerLocations {
 			for(int c=0; c<cityLength; c++){
 				grid[r][c] = distance(r, c, X, Y);
 			}
-		}
+		}		
 		return grid;
 	}
 	
@@ -61,8 +58,8 @@ public class LockerLocations {
 		cityWidth = 7;
 		int[] X1 = {2, 4};
 		int[] Y1 = {3, 7};
-		retGrid = getLockerDistanceGrid(cityLength, cityWidth, X1, Y1);
-		printGrid(retGrid);
+		int[][] retGrid1 = getLockerDistanceGrid(cityLength, cityWidth, X1, Y1);
+		printGrid(retGrid1);
 	}
 
 }
