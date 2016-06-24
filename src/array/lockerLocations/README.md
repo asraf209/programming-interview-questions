@@ -13,7 +13,7 @@ The distance between two lockers is the sum of their horizontal and vertical dis
 
 ## Example
 
-Given <br />
+Given #1 <br />
 3	<br />
 5	<br />
 [1]	<br />
@@ -29,7 +29,7 @@ Return <br />
 ]
 
 
-Given <br />
+Given #2 <br />
 5	<br />
 7	<br />
 [2, 4]	<br />
