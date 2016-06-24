@@ -14,7 +14,7 @@ D		F		<br />
     J			<br />
 
 
-Find the above graph in image format: ./graph.jpg
+Find the above graph in image format: [Graph](./graph.jpg)
 
 
 Source: G				<br />
