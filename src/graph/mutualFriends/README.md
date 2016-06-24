@@ -19,4 +19,4 @@ Mutual friends between C and K is E
 
 Mutual friends between A and E are B, C    
 
-Note: The Graph itself is undirected
+[Graph](./FbGraph.jpg)
