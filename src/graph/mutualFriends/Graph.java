@@ -11,20 +11,7 @@ public class Graph {
 	public Graph(){
 		map = new HashMap<>();
 	}
-	
-	public void addAFriend(String user, String aFriend){
-		List<String> children;
-		if(map.containsKey(user)){
-			children = map.get(user);
-			children.add(aFriend);
-		}
-		else{
-			children = new ArrayList<>();
-			children.add(aFriend);			
-		}
-		map.put(user, children);
-	}
-	
+		
 	public void addFriends(String user, String[] friends){
 		List<String> children;
 		if(map.containsKey(user))
