@@ -1,35 +1,35 @@
 package graph.mutualFriends;
 
-import java.util.ArrayList;
+import java.util.Collections;
 import java.util.HashMap;
-import java.util.List;
+import java.util.HashSet;
 import java.util.Map;
+import java.util.Set;
 
 public class Graph {
-	Map<String, List<String>> map;	
+	Map<String, Set<String>> map;	
 	
 	public Graph(){
 		map = new HashMap<>();
 	}
 		
 	public void addFriends(String user, String[] friends){
-		List<String> children;
+		Set<String> friendsList;
 		if(map.containsKey(user))
-			children = map.get(user);
+			friendsList = map.get(user);
 		else
-			children = new ArrayList<>();				
+			friendsList = new HashSet<>();				
 		
-		for(String aFriend : friends)
-			children.add(aFriend);
+		Collections.addAll(friendsList, friends);
 		
-		map.put(user, children);
+		map.put(user, friendsList);
 	}
 	
-	public List<String> getAllFriends(String user){
+	public Set<String> getAllFriends(String user){
 		if(map.containsKey(user))
 			return map.get(user);
 		else
-			return new ArrayList<>();
+			return new HashSet<>();
 	}
 	
 	public boolean isPresent(String user){

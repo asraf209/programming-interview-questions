@@ -1,7 +1,10 @@
 package graph.mutualFriends;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class FindMutualFriends {
-		
+	
 	public static void main(String[] args) {	
 		Graph fb = new Graph();
 		fb.addFriends("G", new String[]{"A"});
