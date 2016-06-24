@@ -3,6 +3,11 @@ package array.lockerLocations;
 public class LockerLocations {
 	
 	private static int distance(int r, int c, int[]X, int[]Y){
+		int minDistance = Integer.MAX_VALUE;
+		for(int i=0; i<X.length; i++){
+			int distance = Math.abs(r+1-X[i]) + Math.abs(c+1-Y[i]);
+			minDistance = Math.min(minDistance, distance);
+		}
 		return 0;
 	}
 	
