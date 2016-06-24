@@ -2,10 +2,10 @@
 
 Let say, some company wants to undertake locker service across country. They want to ensure that lockers are placed so that customers in the city are always within a short distance from a Locker. You need to model locker placements and distances from lockers.
 
-m - Length of the city in city blocks [1-9]
-n - Width of the city in city blocks [1-9]
-[x1, x2....] - X coordinates representing locker locations [1-9]
-[y1, y2....] - Y coordinates representing locker locations [1-9]
+m - Length of the city in city blocks [1-9]		<br />
+n - Width of the city in city blocks [1-9]		<br />
+[x1, x2....] - X coordinates representing locker locations [1-9]		<br />
+[y1, y2....] - Y coordinates representing locker locations [1-9]		<br />
 
 Your job is to construct a 2-D grid of the City. Each element of the grid should be a positive whole number that specifies the # of blocks to the closest lockers. 
 

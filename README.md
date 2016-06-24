@@ -4,6 +4,7 @@ Helping people in preparing for Programming Interviews
 
 |#|Title|Category|
 |---|-----|---------|
+|21|[Locker Locations](./src/array/lockerLocations)|Array/Grid|
 |20|[Reverse a LinkedList](./src/linkedlist/reverseList)|LinkedList|
 |19|[Permute Numbers](./src/array/permutations)|Array|
 |18|[String Permutations](./src/string/permutations)|String|
