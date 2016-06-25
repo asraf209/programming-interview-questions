@@ -4,6 +4,7 @@ Helping people in preparing for Programming Interviews
 
 |#|Title|Category|
 |---|-----|---------|
+|23|[Square Root](./src/algorithms/squareRoot)|Algorithm|
 |22|[Facebook Mutual Friends](./src/graph/mutualFriends)|Graph Traversal|
 |21|[Locker Locations](./src/array/lockerLocations)|Array/Grid|
 |20|[Reverse a LinkedList](./src/linkedlist/reverseList)|LinkedList|
