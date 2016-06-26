@@ -13,4 +13,4 @@ You will be provided two library functions:
 - getDirectFriendsForUser - Returns a list of customer IDs representing the direct friends of an user
 - getAttendedCoursesForUser - Returns a list of course IDs that an user has attended
 
-Your job is to write a function that provides a ranked(high to low) list of courses(Course IDs) for a given User
+Your job is to write a function that provides a ranked(high to low) list of courses(Course IDs) for any given User
