@@ -26,6 +26,12 @@ public class RecommendedCourses {
 		}				
 	}
 	
+	/**
+	 * O(V * E) + O(log m)
+	 * @param sn
+	 * @param user
+	 * @return
+	 */
 	public List<String> getRankedCourses(Graph sn, String user){
 		if(user==null)	return null;
 		Set<String> visitedUsers = new HashSet<>();
@@ -37,6 +43,7 @@ public class RecommendedCourses {
 		
 		Set<String> attendedCourses = new HashSet<>(sn.getAttendedCoursesForUser(user));
 		
+		// O(V * E)
 		while(depth < 3){
 			List<String> nextUserSet = new ArrayList<>();
 			for(String u : users){
@@ -69,7 +76,7 @@ public class RecommendedCourses {
 			courseList[i] = aCourse;
 			i++;
 		}
-		Arrays.sort(courseList);
+		Arrays.sort(courseList);	// O(log m)
 		
 		List<String> rankedCourses = new ArrayList<>();
 		for(Course c : courseList)
