@@ -21,8 +21,8 @@ public class RecommendedCourses {
 
 		@Override
 		public int compareTo(Course o) {
-			int comp = o.count - this.count;
-			return comp==0?this.name.compareTo(o.name):comp;
+			int comp = o.count - this.count;	// Sort by count
+			return comp==0?this.name.compareTo(o.name):comp;	// Also by name. For Math 101 and Eng 101, Eng 101 will come first
 		}				
 	}
 	
@@ -35,7 +35,7 @@ public class RecommendedCourses {
 		List<String> users = new ArrayList<>();
 		users.add(user);
 		
-		Set<String> attendedCourses = new HashSet<>();
+		Set<String> attendedCourses = new HashSet<>(sn.getAttendedCoursesForUser(user));
 		
 		while(depth < 3){
 			List<String> nextUserSet = new ArrayList<>();
