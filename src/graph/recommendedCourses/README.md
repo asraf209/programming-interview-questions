@@ -4,6 +4,7 @@ Given a Student Social Network, find out all the courses your friends have atten
 
 This Social Network is defined as all direct friends and all direct friends of direct friends. People three levels deep are not part of the social circle.  See it here: [Social Graph](./SocialGraph.jpg)   
 
+
 ## Recommendation Logic
 
 - A user should only be recommended a course that their social network have attended but they have not 
