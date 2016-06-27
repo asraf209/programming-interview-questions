@@ -16,7 +16,7 @@ public class PrefixTree {
 		if(word==null || word.trim().isEmpty())	return false;
 		
 		Node current = root;
-		for(char ch : word.trim().toCharArray()){
+		for(char ch : word.trim().toUpperCase().toCharArray()){
 			if(current.children.containsKey(ch))
 				current = current.children.get(ch);			
 			else 
@@ -30,7 +30,7 @@ public class PrefixTree {
 		if(isPresent(word))	return;
 		
 		Node current = root;
-		for(char ch : word.trim().toCharArray()){
+		for(char ch : word.trim().toUpperCase().toCharArray()){
 			if(current.children.containsKey(ch)){
 				Node child = current.children.get(ch);
 				child.prefix++;
@@ -53,7 +53,7 @@ public class PrefixTree {
 		if(!isPresent(word))	return;
 		
 		Node current = root;
-		for(char ch : word.trim().toCharArray()){
+		for(char ch : word.trim().toUpperCase().toCharArray()){
 			Node child = current.children.get(ch);
 			if(child.prefix > 1)
 				child.prefix--;
@@ -65,4 +65,5 @@ public class PrefixTree {
 		}
 		current.isWord = false;
 	}
+		
 }
