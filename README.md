@@ -4,6 +4,8 @@ Helping people in preparing for Programming Interviews
 
 |#|Title|Category|
 |---|-----|---------|
+|27|[Prefix Tree](./src/datastructures/prefixTree)|Data Structure|
+|26|[Multi tasks](./src/threads/multitasks)|Threads|
 |25|[Insert Node to a CircularList Tail](./src/linkedlist/addNodeToCircularTail)|LinkedList|
 |24|[Recommend Courses in Social Network](./src/graph/recommendedCourses)|Graph Traversal|
 |23|[Square Root](./src/algorithms/squareRoot)|Algorithm|
