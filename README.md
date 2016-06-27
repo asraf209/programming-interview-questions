@@ -4,7 +4,8 @@ Helping people in preparing for Programming Interviews
 
 |#|Title|Category|
 |---|-----|---------|
-|24|[Recommended Courses in Social Network](./src/graph/recommendedCourses)|Graph Traversal|
+|25|[Insert Node to a CircularList Tail](./src/linkedlist/addNodeToCircularTail)|LinkedList|
+|24|[Recommend Courses in Social Network](./src/graph/recommendedCourses)|Graph Traversal|
 |23|[Square Root](./src/algorithms/squareRoot)|Algorithm|
 |22|[Facebook Mutual Friends](./src/graph/mutualFriends)|Graph Traversal|
 |21|[Locker Locations](./src/array/lockerLocations)|Array/Grid|
