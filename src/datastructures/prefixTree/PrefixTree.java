@@ -1,5 +1,7 @@
 package datastructures.prefixTree;
 
+import java.util.Stack;
+
 public class PrefixTree {	
 	
 	protected Node root = new Node();

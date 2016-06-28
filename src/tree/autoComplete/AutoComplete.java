@@ -23,14 +23,18 @@ public class AutoComplete extends PrefixTree{
 		return current;
 	}
 	
-	private void printAllWords(Node node, String word){
-		if(node.getChildren()==null || node.isWord())
-			System.out.println(word);
+	private void listAllWords(Node node, String word, List<String> allWords){
+		if(node.getChildren()==null)
+			allWords.add(word);
 		else{
+			if(node.isWord())
+				allWords.add(word);
+			
 			for(char ch : node.getChildren().keySet()){
 				word = word + ch;
-				node = node.getChildren().get(ch);
-				printAllWords(node, word);
+				Node u = node.getChildren().get(ch);
+				listAllWords(u, word, allWords);
+				word = word.substring(0, word.length()-1);
 			}
 		}
 	}
@@ -40,17 +44,21 @@ public class AutoComplete extends PrefixTree{
 		
 		Node lastMatchedNode = getLastMatchedNode(input);
 		if(lastMatchedNode!=null){
-			printAllWords(lastMatchedNode, input.trim().toUpperCase());
+			List<String> suggestedWords = new ArrayList<>();
+			listAllWords(lastMatchedNode, input.trim().toUpperCase(), suggestedWords);
+			System.out.println(suggestedWords);
 		}
 				
 	}
 	
 	public static void main(String[] args) {		
-		String[] dict = {"Kushtia", "Dhaka", "Dhamrai", "Kumar"};
+		String[] dict = {"Kushtia", "Dhaka", "Dhamrai", "Kumar", "DhakaMan"};
 		AutoComplete obj = new AutoComplete();
 		for(String str : dict)
 			obj.insert(str);
-		obj.suggestedWords("ku");
+		
+		obj.suggestedWords("dh");
+		obj.suggestedWords("kum");
 	}
 
 }
