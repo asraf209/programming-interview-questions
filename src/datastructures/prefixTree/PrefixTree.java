@@ -2,7 +2,7 @@ package datastructures.prefixTree;
 
 public class PrefixTree {	
 	
-	Node root = new Node();
+	protected Node root = new Node();
 	
 	public boolean isPresent(String word){
 		if(word==null || word.trim().isEmpty())	return false;
