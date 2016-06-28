@@ -6,6 +6,11 @@ public class PrefixTree {
 	
 	protected Node root = new Node();
 	
+	/**
+	 * O(m); m - Length of the Word
+	 * @param word
+	 * @return
+	 */
 	public boolean isPresent(String word){
 		if(word==null || word.trim().isEmpty())	return false;
 		
@@ -19,6 +24,10 @@ public class PrefixTree {
 		return current.isWord;
 	}
 	
+	/**
+	 * O(m); m - Length of the Word
+	 * @param word
+	 */
 	public void insert(String word){
 		if(word==null || word.trim().isEmpty())	return;
 		if(isPresent(word))	return;
@@ -42,6 +51,10 @@ public class PrefixTree {
 		current.isWord = true;
 	}
 	
+	/**
+	 * O(m); m - Length of the Word
+	 * @param word
+	 */
 	public void remove(String word){
 		if(word==null || word.trim().isEmpty())	return;
 		if(!isPresent(word))	return;

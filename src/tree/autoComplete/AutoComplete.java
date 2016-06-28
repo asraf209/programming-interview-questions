@@ -8,6 +8,11 @@ import datastructures.prefixTree.PrefixTree;
 
 public class AutoComplete extends PrefixTree{
 	
+	/**
+	 * O(m): m - Length of the input word
+	 * @param input
+	 * @return
+	 */
 	private Node getLastMatchedNode(String input){
 		if(input==null || input.trim().isEmpty())
 			return null;
@@ -23,6 +28,13 @@ public class AutoComplete extends PrefixTree{
 		return current;
 	}
 	
+	/**
+	 * DFS traversal from the last matched Node point
+	 * O(V) + O(E)
+	 * @param node
+	 * @param word
+	 * @param allWords
+	 */
 	private void listAllWords(Node node, String word, List<String> allWords){
 		if(node.getChildren()==null)
 			allWords.add(word);
@@ -38,7 +50,7 @@ public class AutoComplete extends PrefixTree{
 			}
 		}
 	}
-	
+		
 	public void suggestedWords(String input){
 		if(input==null || input.trim().isEmpty())	return;
 		
