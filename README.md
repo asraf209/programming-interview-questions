@@ -4,6 +4,7 @@ Helping people in preparing for Programming Interviews
 
 |#|Title|Category|
 |---|-----|---------|
+|31|[Shuffle song playlist](./src/algorithms/shufflePlayList)|Algorithm|
 |30|[Reverse K Nodes](./src/linkedlist/reverseKNodes)|LinkedList|
 |29|[Traverse BT in Spiral](./src/tree/traverseBTSpiralOrder)|Tree|
 |28|[Auto-Complete Suggestions](./src/tree/autoComplete)|Tree|
