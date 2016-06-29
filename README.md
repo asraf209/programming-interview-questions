@@ -4,6 +4,7 @@ Helping people in preparing for Programming Interviews
 
 |#|Title|Category|
 |---|-----|---------|
+|29|[Traverse BT in Spiral](./src/tree/traverseBTSpiralOrder)|Tree|
 |28|[Auto-Complete Suggestions](./src/tree/autoComplete)|Tree|
 |27|[Prefix Tree](./src/datastructures/prefixTree)|Data Structure|
 |26|[Multi tasks](./src/threads/multitasks)|Threads|

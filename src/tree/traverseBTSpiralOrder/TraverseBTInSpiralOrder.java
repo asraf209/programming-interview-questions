@@ -6,6 +6,7 @@ public class TraverseBTInSpiralOrder {
 	
 	/**
 	 * O(n); n - number of Node's in Binary Tree
+	 * We can also use one Stack and one Queue
 	 * @param root
 	 */
 	public static void printBTinSpiralOrder(Node root){
