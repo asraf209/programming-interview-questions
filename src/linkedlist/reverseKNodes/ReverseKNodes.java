@@ -36,6 +36,8 @@ public class ReverseKNodes {
 	 * @param head
 	 * @param k
 	 * @return
+	 * 
+	 * Another approach is defined in reverseList/ReverseList.java 
 	 */
 	public Node reverseKNodesFromHead(Node head, int k){
 		if(head==null || head.next==null || k<2)
