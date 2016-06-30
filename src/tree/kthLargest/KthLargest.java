@@ -1,7 +1,25 @@
 package tree.kthLargest;
 
 public class KthLargest {
-
+	
+	static int count = 0;
+	
+	public static void findKthLargest(Node root, int k){
+		if(root==null)	return;
+		
+		if(root.right!=null)
+			findKthLargest(root.right, k);
+		
+		count++;
+		if(k == count){
+			System.out.println("k=" + k + ", value: " + root.value);
+			return;
+		}
+		
+		if(root.left!=null)
+			findKthLargest(root.left, k);		
+	}		
+	
 	public static void main(String[] args) {
 		Node n1 = new Node(20);
 		Node n2 = new Node(8);
@@ -17,6 +35,8 @@ public class KthLargest {
 		n2.right = n5;		
 		n5.left = n6;
 		n5.right = n7;
+		
+		findKthLargest(n1, 3);				
 	}
 
 }
