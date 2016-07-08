@@ -64,14 +64,30 @@ public class SumKBST {
 			else if(val1+val2 > k)
 				rightDone = false;
 			
-			if(val1 > val2)
+			if(val1 >= val2)
 				return pair;
 		}
 	}
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-
+		TreeNode n1 = new TreeNode(15);
+		TreeNode n2 = new TreeNode(10);
+		TreeNode n3 = new TreeNode(20);
+		TreeNode n4 = new TreeNode(8);
+		TreeNode n5 = new TreeNode(12);
+		TreeNode n6 = new TreeNode(16);
+		TreeNode n7 = new TreeNode(25);
+		
+		n1.left  = n2;
+		n1.right = n3;
+		n2.left  = n4;
+		n2.right = n5;
+		n3.left  = n6;
+		n3.right = n7;
+		
+		System.out.println(getPairForKsum(n1, 15));
+		System.out.println(getPairForKsum(n1, 20));
+		
 	}
 
 }
