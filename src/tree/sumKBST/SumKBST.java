@@ -6,6 +6,13 @@ import java.util.Stack;
 
 public class SumKBST {
 	
+	/**
+	 * Time: O(n)
+	 * Space: O(log n)
+	 * @param root
+	 * @param k
+	 * @return
+	 */
 	public static List<Integer> getPairForKsum(TreeNode root, int k){
 		if(root==null)	return null;
 		TreeNode n1 = root;
@@ -87,7 +94,8 @@ public class SumKBST {
 		
 		System.out.println(getPairForKsum(n1, 15));
 		System.out.println(getPairForKsum(n1, 20));
-		
+		System.out.println(getPairForKsum(n1, 32));
+		System.out.println(getPairForKsum(n1, 33));
 	}
 
 }

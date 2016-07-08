@@ -2,7 +2,7 @@
 
 Given a binary search tree, find two numbers in the tree whose sum is k. If there are no such elements, state so. Assume that the tree is balanced. 
 
-O(n) solution with O(log n) space was expected
+O(n) solution with O(log n) space is expected
 
 ## Example
 
