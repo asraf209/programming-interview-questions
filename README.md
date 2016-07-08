@@ -1,6 +1,6 @@
 Programming Interview Questions
 ===============================
-Helping people in preparing for Programming Interviews. Please feel free to contribute. 
+Helping people in preparing for Programming Interviews. Feel free to contribute. 
 
 |#|Title|Category|
 |---|-----|---------|
