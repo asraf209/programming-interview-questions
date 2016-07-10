@@ -70,18 +70,78 @@ public class MedianOfTwoSortedArrays {
 			return ((nums[(s+e)/2] + nums[((s+e)/2)+1])/2.0);
 	}
 	
+	/**
+	 * Linear Approach; O(n/2)
+	 * Count total numbers and find the median point.
+	 * Now compare elements of both the Array in a sorted order untill you reach the median point.
+	 * If total (m+n) is Odd then return number from this point.
+	 * Else return avg of this num and its next one
+	 */
+	public static double getMedianLinearApproach(int[] nums1, int[] nums2){
+		if(nums1==null || nums2==null)	return 0;
+		if(nums1.length<1)	return median(nums2, 0, nums2.length-1);
+		else if(nums2.length<1)	return median(nums1, 0, nums1.length-1);
+		
+		int m = nums1.length;
+		int n = nums2.length;		
+		int med = 0;
+		
+		// Median point
+		if((m+n)%2==0)	med = (m+n)/2 -1;
+		else	med = (m+n)/2;
+		
+		int c=0;
+		int i=0, j=0;		
+		boolean isArr1 = false;
+		while(c <= med){
+			if(nums1[i]<=nums2[j]){
+				i++;
+				isArr1 = true;
+			}
+			else{ 
+				j++;
+				isArr1 = false;
+			}
+			c++;
+		}				
+		
+		if((m+n)%2==0){
+			int a=0, b=0;
+			if(isArr1){
+				a=nums1[i-1];
+				if(nums1[i] <= nums2[j])
+					b = nums1[i];
+				else
+					b = nums2[j];				
+			}
+			else{
+				a=nums2[j-1];
+				if(nums1[i] <= nums2[j])
+					b = nums1[i];
+				else
+					b = nums2[j];				
+			}
+			return (a+b)/2.0;
+		}
+		else
+			return isArr1?nums1[i-1]:nums2[j-1];
+	}
+	
 	public static void main(String[] args) {
 		int[] nums1 = {1, 3};
 		int[] nums2 = {2};
 		System.out.println(getMedian(nums1, nums2));
+		System.out.println(getMedianLinearApproach(nums1, nums2));
 		
 		nums1 = new int[]{1, 3};
 		nums2 = new int[]{2, 4};
 		System.out.println(getMedian(nums1, nums2));
+		System.out.println(getMedianLinearApproach(nums1, nums2));
 		
 		nums1 = new int[]{1, 5, 9, 10, 15, 20};
 		nums2 = new int[]{2, 3, 8, 13};
 		System.out.println(getMedian(nums1, nums2));				
+		System.out.println(getMedianLinearApproach(nums1, nums2));
 	}
 
 }
