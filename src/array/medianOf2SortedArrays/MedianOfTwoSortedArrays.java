@@ -107,20 +107,13 @@ public class MedianOfTwoSortedArrays {
 		
 		if((m+n)%2==0){
 			int a=0, b=0;
-			if(isArr1){
-				a=nums1[i-1];
-				if(nums1[i] <= nums2[j])
-					b = nums1[i];
-				else
-					b = nums2[j];				
-			}
-			else{
-				a=nums2[j-1];
-				if(nums1[i] <= nums2[j])
-					b = nums1[i];
-				else
-					b = nums2[j];				
-			}
+			if(isArr1)	a=nums1[i-1];			
+			else		a=nums2[j-1];				
+				
+			if(nums1[i] <= nums2[j])
+				b = nums1[i];
+			else
+				b = nums2[j];
 			return (a+b)/2.0;
 		}
 		else
@@ -141,6 +134,11 @@ public class MedianOfTwoSortedArrays {
 		nums1 = new int[]{1, 5, 9, 10, 15, 20};
 		nums2 = new int[]{2, 3, 8, 13};
 		System.out.println(getMedian(nums1, nums2));				
+		System.out.println(getMedianLinearApproach(nums1, nums2));
+		
+		nums1 = new int[]{1, 2};
+		nums2 = new int[]{1, 2, 3};
+		System.out.println(getMedian(nums1, nums2));		// This will not give the right Median		
 		System.out.println(getMedianLinearApproach(nums1, nums2));
 	}
 

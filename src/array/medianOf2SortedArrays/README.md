@@ -40,3 +40,14 @@ Space: O(1) <br />
 Time: O(m * n)
 
 ### O(log (m + n)) Solution
+Compute median for each array (m1, m2) and compare. 
+
+If m1 is greater than m2, then median is present in one of the below two sub-arrays.
+
+1. From first element of ar1 to m1 (ar1[0...|_n/2_|])
+-  From m2 to last element of ar2  (ar2[|_n/2_|...n-1])
+
+If m2 is greater than m1, then median is present in one of the below two subarrays.
+
+1. From m1 to last element of ar1  (ar1[|_n/2_|...n-1])
+-  From first element of ar2 to m2 (ar2[0...|_n/2_|])	 
