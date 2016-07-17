@@ -18,5 +18,5 @@ Space complexity: O ( 1 )
 ### Methhod 2 ( Dynamic Programming )
 Based on http://articles.leetcode.com/longest-palindromic-substring-part-i/
 
- 
+For "abcba", "bcb" is a palindrome. Now if we add char on their both sides "abcba" it still a palindrome. We just need to check that if the chars we are adding(0, 4) are same and rest of the string(1-3) is a palindrome. 
 
