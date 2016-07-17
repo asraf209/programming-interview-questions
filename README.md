@@ -4,6 +4,7 @@ Helping people in preparing for Programming Interviews. Feel free to contribute.
 
 |#|Title|Category|
 |---|-----|---------|
+|35|[Longest Palindromic Substring](./src/dp/longestPalindromicSubstring)|Dynamic Programming|
 |34|[Median of two sorted Arrays](./src/array/medianOf2SortedArrays)|Array|
 |33|[Pair in a BST for k Sum](./src/tree/sumKBST)|Tree|
 |32|[K-th largest item in BST](./src/tree/kthLargest)|Tree|
