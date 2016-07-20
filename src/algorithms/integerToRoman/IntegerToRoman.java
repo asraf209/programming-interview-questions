@@ -4,11 +4,12 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class IntegerToRoman {
+	private final int MAX_NUM = 3999;
 	private Map<Integer, String> dict;
 	
 	public IntegerToRoman(){
 		dict  = new HashMap<>();
-		preProcess();
+		preProcess();		
 	}
 	
 	private void preProcess(){
@@ -22,12 +23,18 @@ public class IntegerToRoman {
 	}
 	
 	public String convertIntegerToRoman(int num){
-		if(num<=0)	return "";
-		
+		if(num<=0 || num>MAX_NUM)	return "Not a valid number!";
+		if(dict.containsKey(num))
+			return dict.get(num);
+		else{
+			
+		}
+		return "";
 	}
 	
 	public static void main(String[] args) {
-		
+		IntegerToRoman iToR = new IntegerToRoman();
+		System.out.println(iToR.convertIntegerToRoman(1));
 	}
 
 }
