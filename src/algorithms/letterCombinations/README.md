@@ -10,4 +10,6 @@ Input: Digit string "23"
 Output: ["ad", "ae", "af", "bd", "be", "bf", "cd", "ce", "cf"]. 
 
 ## Solutions
-We will be using a Queue. Read each character from a string and add it will all the contens of the Queue. Remove the content from Queue before doing the addition. Also insert it back in the Queue after addition.
+We will be using a Queue. 
+
+Read each character of a string. If Queue is empty simply put all those into the Queue. Else, remove elements one by one from Queue and add each char with all those elements and insert them back into the Queue. 
