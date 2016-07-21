@@ -1,9 +1,12 @@
 Programming Interview Questions
 ===============================
-Helping people in preparing for Programming Interviews. Feel free to contribute. 
+Helping people in preparing for Programming Interviews. 
 
 |#|Title|Category|
 |---|-----|---------|
+|38|[Letter combinations of a phone number](./src/algorithms/letterCombinations)|Algorithm|
+|37|[Roman to Integer](./src/algorithms/romanToInteger)|Algorithm|
+|36|[Integer to Roman](./src/algorithms/integerToRoman)|Algorithm|
 |35|[Longest Palindromic Substring](./src/dp/longestPalindromicSubstring)|Dynamic Programming|
 |34|[Median of two sorted Arrays](./src/array/medianOf2SortedArrays)|Array|
 |33|[Pair in a BST for k Sum](./src/tree/sumKBST)|Tree|
