@@ -23,3 +23,6 @@ Space complexity: O(m1+m2+m3+.....+mn)
 2) Another approach is to use a MinHeap. Make a MinHeap of K nodes, taking each of them(Head) from K list respectively. <br /> 
    The root of the Heap will contain the minimum Node. Take it out from Heap and store in the output list <br />
    Replace Heap root with the next Node from the list from which the Node was extracted
+   
+   Time complexity: O(m1+m2+m3+.....+mn)*logK	<br />
+   Space complexity: O(m1+m2+m3+.....+mn)
