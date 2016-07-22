@@ -1,6 +1,6 @@
 # Merge k sorted lists
 
-Merge k sorted linked lists and return it as one sorted list. Analyze and describe its complexity.
+Merge K sorted linked lists and return it as one sorted list. Analyze and describe its complexity.
 
 
 ## Example
@@ -13,3 +13,13 @@ Input:	k = 3
 
 
 Output: 0 1 2 3 4 5 6 7 8 9 10 11 
+
+## Solutions:
+1) Same as merging two sorted lists. First merge two sorted lists. Then merge the next list with the output of earlier merge
+
+Time complexity: O(m1+m2+m3+.....+mn)	<br />
+Space complexity: O(m1+m2+m3+.....+mn)
+
+2) Another approach is to use a MinHeap. Make a MinHeap of K nodes, taking each of them(Head) from K list respectively. <br /> 
+   The root of the Heap will contain the minimum Node. Take it out from Heap and store in the output list <br />
+   Replace Heap root with the next Node from the list from which the Node was extracted

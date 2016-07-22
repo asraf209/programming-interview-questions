@@ -72,7 +72,13 @@ public class MergeKSortedLists {
         
         return out;
 	}
-    
+
+    public void print(ListNode head){
+    	while(head!=null){
+    		System.out.print(head.val + ", ");
+    	}
+    	System.out.println();
+    }
 	public static void main(String[] args) {		
 
 	}
