@@ -4,6 +4,8 @@ Helping people in preparing for Programming Interviews.
 
 |#|Title|Category|
 |---|-----|---------|
+|40|[Reverse Nodes in K group](./src/linkedlist/reverseListInKGroups)|LinkedList|
+|39|[Merge k sorted lists](./src/linkedlist/mergeKSortedLists)|LinkedList|
 |38|[Letter combinations of a phone number](./src/algorithms/letterCombinations)|Algorithm|
 |37|[Roman to Integer](./src/algorithms/romanToInteger)|Algorithm|
 |36|[Integer to Roman](./src/algorithms/integerToRoman)|Algorithm|
