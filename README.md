@@ -4,6 +4,7 @@ Helping people in preparing for Programming Interviews.
 
 |#|Title|Category|
 |---|-----|---------|
+|42|[Remove Element](./src/array/removeElement)|Array|
 |41|[Remove duplicates from sorted Array](./src/array/removeDuplicatesFromSortedArray)|Array|
 |40|[Reverse Nodes in K group](./src/linkedlist/reverseNodesInKGroups)|LinkedList|
 |39|[Merge k sorted lists](./src/linkedlist/mergeKSortedLists)|LinkedList|
