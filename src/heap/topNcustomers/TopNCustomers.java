@@ -47,9 +47,13 @@ public class TopNCustomers {
 		 * Maintain the Heap size to N
 		 */
 		for(Entry<String, Integer> customer : expenseInfo.entrySet()){
-			if(heap.size() == N)
-				heap.poll();
-			heap.offer(customer);
+			if(heap.size()<N)	heap.offer(customer);
+			else{
+				if(customer.getValue() > heap.peek().getValue()){
+					heap.poll();
+					heap.offer(customer);
+				}
+			}		
 		}		
 		
 		return heap.toArray();
@@ -57,9 +61,16 @@ public class TopNCustomers {
 	
 	public static void main(String[] args) {
 		int N = 2;
-		String[] names = {"bob", "sam", "smith", "alan", "sam", "sam", "kobi", "sam", "bob", "alan"};
-		int[] expenses = {100, 200, 300, 400, 500, 600, 700, 800, 900, 1000};
-		
+		/**
+		 * bob = 1000
+		 * sam = 70
+		 * smith = 300
+		 * alan = 1100
+		 * kobi = 1300
+		 */
+		String[] names = {"bob", "sam", "smith", "alan", "sam", "kobi", "bob", "alan", "kobi"};
+		int[] expenses = {100, 200, 300, 400, 500, 700, 900, 700, 600};
+				
 		Object[] retMap = findTopNCustomer(names, expenses, N);
 		System.out.println("Top " + N + ": ");
 		for(Object item : retMap){
