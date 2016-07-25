@@ -53,6 +53,35 @@ public class Merge2SortedArrays {
 		}
 	}
 	
+	
+	/**
+	 * 2nd Approach
+	 * Compare last items from both the Arrays. The bigger one should be in 2nd Array
+	 * Swap them if they are not. Now sort the 1st Array only. Continue this process untill the size of 2nd Array
+	 * O(m*n) 
+	 */	
+	public static void mergeSortedArrays_Solution2(int[] arr1, int[] arr2){
+		if(arr1==null || arr2==null)	return;
+		
+		for(int j=arr2.length-1; j>=0; j--){
+			if(arr1[arr1.length-1] > arr2[j]){	// Swap 
+				int tmp = arr2[j];
+				arr2[j] = arr1[arr1.length-1];
+				arr1[arr1.length-1] = tmp;
+			
+				// Sort Array1
+				for(int i=arr1.length-1; i>0; i--){
+					if(arr1[i-1] > arr1[i]){
+						int n = arr1[i-1];
+						arr1[i-1] = arr1[i];
+						arr1[i] = n;
+					}
+				}
+			}
+		}
+				
+	}
+	
 	public static void printArrays(int[] arr1, int[] arr2){
 		for(int n : arr1)	System.out.print(n + ", ");
 	    System.out.println();
@@ -63,9 +92,9 @@ public class Merge2SortedArrays {
 	public static void main(String[] args) {
 		int[] arr1 = {1, 5, 9, 10, 15, 20};
 	    int[] arr2 = {2, 3, 8, 13};
-	    mergeSortedArrays(arr1, arr2);   
-	    
-	    printArrays(arr1, arr2);
+	    //mergeSortedArrays(arr1, arr2);   	    
+	    mergeSortedArrays_Solution2(arr1, arr2);
+	    printArrays(arr1, arr2);	    	   
 	}
 
 }
