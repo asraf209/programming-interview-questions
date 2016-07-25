@@ -42,6 +42,7 @@ public class RecommendedCourses {
 		users.add(user);
 		
 		Set<String> attendedCourses = new HashSet<>(sn.getAttendedCoursesForUser(user));
+		visitedUsers.add(user);
 		
 		// O(V * E)
 		while(depth < 3){
@@ -61,9 +62,10 @@ public class RecommendedCourses {
 							}
 						}
 						nextUserSet.add(friend);
+						visitedUsers.add(friend);
 					}
 				}
-				visitedUsers.add(u);
+				//visitedUsers.add(u);
 			}
 			users = nextUserSet;
 			depth++;
@@ -76,7 +78,7 @@ public class RecommendedCourses {
 			courseList[i] = aCourse;
 			i++;
 		}
-		Arrays.sort(courseList);	// O(log m)
+		Arrays.sort(courseList);	// O(m log m)
 		
 		List<String> rankedCourses = new ArrayList<>();
 		for(Course c : courseList)
