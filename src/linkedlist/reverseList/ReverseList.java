@@ -52,8 +52,20 @@ public class ReverseList {
 	public Node reverseListWithoutExtraSpace(Node head){
 		if(head == null || head.next==null)
 			return head;
-				
-		Node curr = head.next;
+		
+		// Refactored concise version		
+		Node newHead = head;
+		head = head.next;
+		newHead.next = null;
+		
+		while(head!=null){
+			Node tmp = head;
+			head = head.next;
+			tmp.next = newHead;
+			newHead = tmp;
+		}
+		
+		/*Node curr = head.next;
 		Node newTail = head;
 		newTail.next = null;
 		Node newHead = newTail;
@@ -70,7 +82,7 @@ public class ReverseList {
 				tmp.next = newHead;
 				newHead = tmp;
 			}
-		}
+		}*/
 		
 		return newHead;
 	}
