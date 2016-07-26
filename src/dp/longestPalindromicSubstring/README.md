@@ -3,8 +3,6 @@ Given a string S, find the longest palindromic substring in S. You may assume th
 
 
 ## Examples
-The longest common substring between S and S’ is “aba”, which is the answer.
-
 If the given string is “forgeeksskeegfor”, the output should be “geeksskeeg”.
 
 ## Solutions
