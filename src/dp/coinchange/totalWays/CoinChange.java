@@ -2,6 +2,7 @@ package dp.coinchange.totalWays;
 
 public class CoinChange {
 
+	// O(m*n)
 	static int findTotalWaysForCoinChange(int[] d, int S){
 		if(d==null || d.length<1 || S<0)	return 0;
 		else if(S==0)	return 1;
@@ -29,13 +30,23 @@ public class CoinChange {
 					dp[r][c] = dp[r][c-1];
 			}
 		}
+		printMatrix(dp);
 		
 		return dp[S][d.length];
 	}
 	
+	static void printMatrix(int[][] m){
+		for(int i=0; i<m.length; i++){
+			for(int j=0; j<m[0].length; j++){
+				System.out.print(m[i][j]+", ");
+			}
+			System.out.println();
+		}
+	}
+	
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-
+		int[] d = {1, 2, 3};
+		System.out.println(findTotalWaysForCoinChange(d, 5));
 	}
 
 }
