@@ -25,6 +25,16 @@ public class ConvertBSTtoDLL {
 		return head;
 	}
 	
+	/**
+	 * This is basically an In-Order Traversal.
+	 * But while traversing, we are building a Doubly Linked List
+	 * 
+	 * Point to Note: We are not passing head/tail in each recursive call. Because, while backtracking,
+	 * the method will not see the head/tail pointer being created in earlier step.
+	 * That's why we kept head/tail at instance level as opposed to method level. So their changes will be visible always in any recursive step
+	 * 
+	 *  O(V)	V - # of vertices
+	 */
 	void convertToDLLHelper(Node root){
 		if(root!=null){
 			convertToDLLHelper(root.left);
