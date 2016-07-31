@@ -14,5 +14,3 @@ Total ways to make change = 5
 {1,1,1,1,1} {1,1,1,2}, {1,2,2}, {1,1,3} {2,3}
 
 As we see minimum number of coins we need 2 {2+3 = 5}
-
-[DP Solution Table](./table.jpg) 
