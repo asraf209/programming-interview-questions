@@ -4,6 +4,8 @@ Helping people in preparing for Programming Interviews.
 
 |#|Title|Category|
 |---|-----|---------|
+|45|[CoinChange: Min # of ways](./src/dp/coinchange/minCoins)|Dynamic Programming|
+|44|[CoinChange: Total # of ways](./src/dp/coinchange/totalWays)|Dynamic Programming|
 |43|[Implement strStr](./src/string/strstr)|String|
 |42|[Remove Element](./src/array/removeElement)|Array|
 |41|[Remove duplicates from sorted Array](./src/array/removeDuplicatesFromSortedArray)|Array|
