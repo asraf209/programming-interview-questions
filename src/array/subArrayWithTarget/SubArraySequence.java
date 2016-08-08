@@ -18,7 +18,9 @@ public class SubArraySequence {
 	}
 	
 	/**
-	 * Trivial solution. O(n^2)	
+	 * Trivial solution, works for both (+)ve and (-)ve numbers
+	 * Consider each subarray one by one and compute sum to check with target value 
+	 * O(n^2)	
 	 */
 	SubSequenceRange findSubSequence(int[] a, int target){
 		if(a==null || a.length<1)
@@ -37,7 +39,11 @@ public class SubArraySequence {
 		return null;
 	}
 		
-	
+	/**
+	 * Efficient one, works for only (+)ve numbers
+	 * Sliding window solution
+	 * O(n)
+	 */
 	SubSequenceRange findSubSequence21(int[] a, int target){
 		if(a==null || a.length<1)
 			return null;
@@ -70,19 +76,16 @@ public class SubArraySequence {
 	public static void main(String[] args) {
 		SubArraySequence obj = new SubArraySequence();
 		int[] a = {30, 5, 16, 13, 3, 24, 19, 1, 25};
-		//System.out.println(obj.findSubSequence(a, 47));
+		System.out.println(obj.findSubSequence(a, 47));	// returns 4-7
 		
 		int[] b = {30, 5, 16, 13, 3, 24, -19, 1, 25};
-		//System.out.println(obj.findSubSequence(b, 9));
+		System.out.println(obj.findSubSequence(b, 9));
 		
 		int[] c = {3000, 5, 16, 13, 3, 24, 19, 1, 25};
-		//System.out.println(obj.findSubSequence21(c, 47));
-		
-		int[] d = {3000, 5, 16, -13, 3, -24, 19, 1, 25};
-		//System.out.println(obj.findSubSequence21(d, -34));
-		
-		int[] e = {15, 2, 4, 8, 9, 5, 10, 23};	// returns 1-4
-		System.out.println(obj.findSubSequence21(e, 23));
+		System.out.println(obj.findSubSequence21(c, 47));
+				
+		int[] e = {15, 2, 4, 8, 9, 5, 10, 23};	
+		System.out.println(obj.findSubSequence21(e, 23));	// returns 1-4
 	}
 
 }
