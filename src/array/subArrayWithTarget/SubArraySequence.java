@@ -36,17 +36,15 @@ public class SubArraySequence {
 		
 		return null;
 	}
+		
 	
-	/**
-	 * O(n) solution. But only works if all numbers are (+)ve	 
-	 */
-	SubSequenceRange findSubSequence2(int[] a, int target){
+	SubSequenceRange findSubSequence21(int[] a, int target){
 		if(a==null || a.length<1)
 			return null;
 		
 		int s=0, e=0;
-		int sum = 0;//a[s];
-		while(e<a.length){
+		int sum = 0;
+		while(s<=e && e<a.length){				
 			if((sum + a[e]) == target){
 				return new SubSequenceRange(s, e);
 			}
@@ -54,15 +52,15 @@ public class SubArraySequence {
 				sum += a[e];
 				e++;
 			}
-			else{				
-				/*sum -= a[s];
-				s++;*/
-				if(sum != 0){
+			else{
+				if(sum != 0 && s<e){
 					sum -= a[s];
-					sum += a[e];
+					s++;				
 				}				
-				s++;
-				e++;							
+				else{
+					s++;
+					e++;
+				}										
 			}
 		}
 		
@@ -72,16 +70,19 @@ public class SubArraySequence {
 	public static void main(String[] args) {
 		SubArraySequence obj = new SubArraySequence();
 		int[] a = {30, 5, 16, 13, 3, 24, 19, 1, 25};
-		System.out.println(obj.findSubSequence(a, 47));
+		//System.out.println(obj.findSubSequence(a, 47));
 		
 		int[] b = {30, 5, 16, 13, 3, 24, -19, 1, 25};
-		System.out.println(obj.findSubSequence(b, 9));
+		//System.out.println(obj.findSubSequence(b, 9));
 		
 		int[] c = {3000, 5, 16, 13, 3, 24, 19, 1, 25};
-		System.out.println(obj.findSubSequence2(c, 47));
+		//System.out.println(obj.findSubSequence21(c, 47));
 		
 		int[] d = {3000, 5, 16, -13, 3, -24, 19, 1, 25};
-		System.out.println(obj.findSubSequence2(d, -34));
+		//System.out.println(obj.findSubSequence21(d, -34));
+		
+		int[] e = {15, 2, 4, 8, 9, 5, 10, 23};	// returns 1-4
+		System.out.println(obj.findSubSequence21(e, 23));
 	}
 
 }
