@@ -4,6 +4,7 @@ Helping people in preparing for Programming Interviews.
 
 |#|Title|Category|
 |---|-----|---------|
+|48|[Angle between Hour & Minute](./src/algorithms/hourAndMinAngle)|Algorithm|
 |47|[Find subarray for a given target](./src/array/subArrayWithTarget)|Array|
 |46|[Convert BST to DLL](./src/tree/convertBSTtoDLL)|Tree|
 |45|[CoinChange: Min # of ways](./src/dp/coinchange/minCoins)|Dynamic Programming|
