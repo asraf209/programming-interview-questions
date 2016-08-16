@@ -8,7 +8,9 @@ We can do this by XORing the input with a number that has 1 in all of its 32 bit
 
 ## Code
 
+```java
 int reverseBits(int n){
 	int flag = ~ 0; 	// All 1's; Inverse operations
 	return (n ^ flag);
 } 
+```
