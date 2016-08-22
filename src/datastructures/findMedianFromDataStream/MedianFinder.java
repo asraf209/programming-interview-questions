@@ -27,6 +27,32 @@ public class MedianFinder {
 		});
 	}
 	
+	public void addNum(int n){
+		if(count==0 || n<=leftHeap.peek()){
+			leftHeap.offer(n);
+			count++;
+			if(count%2==0){
+				rightHeap.offer(leftHeap.poll());
+			}
+		}
+		else{
+			rightHeap.offer(n);
+			count++;
+			if(count%2!=0){
+				leftHeap.offer(rightHeap.poll());
+			}
+		}
+	}
+	
+	public double findMedian(){
+		if(count%2==0){
+			double median = (leftHeap.peek() + rightHeap.peek()) / 2;
+			return median;
+		}
+		
+		return leftHeap.peek(); 
+	}
+	
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 
