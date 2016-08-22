@@ -4,6 +4,8 @@ Helping people in preparing for Programming Interviews.
 
 |#|Title|Category|
 |---|-----|---------|
+|52|[Find median from Data Stream](./src/datastructures/findMedianFromDataStream)|Data Structure|
+|51|[Number to Excel Column](./src/algorithms/numberToExcel)|Algorithm|
 |50|[Bit Manipulation](./src/bit/bitManipulation)|Bit Manipulation|
 |49|[N-way Merge](./src/algorithms/nWayMerge)|Algorithm|
 |48|[Angle between Hour & Minute](./src/algorithms/hourAndMinAngle)|Algorithm|
