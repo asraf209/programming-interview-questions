@@ -2,6 +2,7 @@ package datastructures.findMedianFromDataStream;
 
 import java.util.Comparator;
 import java.util.PriorityQueue;
+import java.util.Scanner;
 
 public class MedianFinder {
 	int count;
@@ -27,6 +28,12 @@ public class MedianFinder {
 		});
 	}
 	
+	/**
+	 * After adding to the left, if count becomes even, then remove top element from left and add it to right
+	 * Similarly, after adding to the right, if count becomes odd, then remove top element from right and add it to left
+	 * 
+	 * Complexity O(logN)
+	 */
 	public void addNum(int n){
 		if(count==0 || n<=leftHeap.peek()){
 			leftHeap.offer(n);
@@ -45,8 +52,9 @@ public class MedianFinder {
 	}
 	
 	public double findMedian(){
+		System.out.println("Count: " + count + ", " + leftHeap.peek() + ", " + rightHeap.peek());
 		if(count%2==0){
-			double median = (leftHeap.peek() + rightHeap.peek()) / 2;
+			double median = (leftHeap.peek() + rightHeap.peek()) / 2.0;
 			return median;
 		}
 		
@@ -54,8 +62,16 @@ public class MedianFinder {
 	}
 	
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-
+		MedianFinder mf = new MedianFinder();
+		Scanner scanner = new Scanner(System.in);
+		while(scanner.hasNext()){
+			String input = scanner.nextLine();
+			if("q".equals(input))	break;
+			int n = Integer.parseInt(input);
+			mf.addNum(n);
+			System.out.println(mf.findMedian());
+		}
+		scanner.close();
 	}
 
 }
