@@ -4,6 +4,7 @@ Helping people in preparing for Programming Interviews.
 
 |#|Title|Category|
 |---|-----|---------|
+|54|[In-Order traversal of leaf Nodes](./src/tree/leafNodesInOrder)|Tree|
 |53|[Sum of Root-to-Leaf Numbers](./src/tree/sumRootToLeafNumbers)|Tree|
 |52|[Find median from Data Stream](./src/datastructures/findMedianFromDataStream)|Data Structure|
 |51|[Number to Excel Column](./src/algorithms/numberToExcel)|Algorithm|

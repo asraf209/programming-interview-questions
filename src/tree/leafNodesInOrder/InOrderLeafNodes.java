@@ -1,5 +1,7 @@
 package tree.leafNodesInOrder;
 
+import java.util.LinkedList;
+
 class Node{
 	int value;
 	Node left;
@@ -12,10 +14,31 @@ class Node{
 	}
 }
 
+/**
+ * DFS traversal
+ * We could also do BFS 
+ */
 public class InOrderLeafNodes {
 	
-	public static void main(String[] args) {
-		Node n0 = new Node(0);
+	LinkedList<Node> getLeafNodesInOrder(Node root){
+		if(root == null)	return null;
+		LinkedList<Node> out = new LinkedList<>();
+		inOrderHelper(root, out);
+		return out;
+	}
+	
+	void inOrderHelper(Node root, LinkedList<Node> list){
+		if(root == null)	return;
+		
+		if(root.left==null && root.right==null)
+			list.add(root);
+		if(root.left!=null)
+			inOrderHelper(root.left, list);
+		if(root.right!=null)
+			inOrderHelper(root.right, list);
+	}
+	
+	public static void main(String[] args) {		
 		Node n1 = new Node(1);
 		Node n2 = new Node(2);
 		Node n3 = new Node(3);
@@ -24,9 +47,14 @@ public class InOrderLeafNodes {
 		Node n6 = new Node(6);
 		
 		n4.left = n2;	n4.right = n5;
-		n2.left = n1;	n2.right = n3;
-		n1.left = n0;	
+		n2.left = n1;	n2.right = n3;		
 		n5.right = n6;
+		
+		LinkedList<Node> out = new InOrderLeafNodes().getLeafNodesInOrder(n4);
+		for(Node n : out){
+			System.out.print(n.value+"->");
+		}
+		System.out.println();
 	}
 
 }
