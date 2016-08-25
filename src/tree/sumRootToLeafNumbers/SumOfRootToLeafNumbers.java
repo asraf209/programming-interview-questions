@@ -1,5 +1,12 @@
 package tree.sumRootToLeafNumbers;
 
+/**
+ * DFS traversal. 
+ * 1) At each node, populate the number itself bu computing (10*res + digit) formula
+ * 2) When reach to a leaf node compute the total sumSince i
+ * 3) It's a recursive algorithm and we will finish when all nodes are traversed. And there is no other exit condition here.
+ * 	  So instead of returning from the recursive function, we made a wrapper class Total, which will be populating each time we hit a leaf node
+ */
 public class SumOfRootToLeafNumbers {
 	
 	class TreeNode {
@@ -20,7 +27,7 @@ public class SumOfRootToLeafNumbers {
         sumNumbersHelper(root, total, 0);
         return total.value;
     }
-	
+		
 	public void sumNumbersHelper(TreeNode root, Total total, int num){
 		if(root == null)	return;
 		
