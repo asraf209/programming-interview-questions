@@ -21,6 +21,13 @@ public class Heap {
 			}
 		});
 		
+		/**
+		 * You can call both add() and offer() method. There is no basic difference between them. Actually, add() directly
+		 * call offer() in PriorityQueue API. 
+		 * 
+		 * But for AbstractQueue, there is a difference. There add() returns an exception if for some reason it is unable
+		 * to insert the element. offer() does not return any exception there. So its a good practice to use add() all time
+		 */
 		for(int n : a){
 			minHeap.offer(n);
 		}
