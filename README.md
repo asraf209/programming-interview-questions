@@ -4,6 +4,8 @@ Helping people in preparing for Programming Interviews.
 
 |#|Title|Category|
 |---|-----|---------|
+|56|[In-Order Traversal](./src/tree/inOrder)|Tree|
+|55|[Flatten Binary Tree](./src/tree/flattenBTree)|Tree|
 |54|[In-Order traversal of leaf Nodes](./src/tree/leafNodesInOrder)|Tree|
 |53|[Sum of Root-to-Leaf Numbers](./src/tree/sumRootToLeafNumbers)|Tree|
 |52|[Find median from Data Stream](./src/datastructures/findMedianFromDataStream)|Data Structure|
