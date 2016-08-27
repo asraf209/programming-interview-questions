@@ -18,7 +18,19 @@ public class NPrimeNumbers {
 	}
 	
 	public static void main(String[] args) {
-				
+		System.out.print("How many prime numbers you want: ");
+		Scanner scan = new Scanner(System.in);
+		int N = scan.nextInt();
+		if(N<1)	return;
+		
+		int num = 1;
+		int count=0;
+		while(count<N && num<Integer.MAX_VALUE){
+			if(isPrime(num)){
+				System.out.print(num+",");
+				count++;
+			}
+			num++;
+		}
 	}
-
 }
