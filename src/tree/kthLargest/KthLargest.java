@@ -1,5 +1,7 @@
 package tree.kthLargest;
 
+import java.util.Stack;
+
 public class KthLargest {
 	
 	private int count = 0;
@@ -25,6 +27,33 @@ public class KthLargest {
 		kthLargest(root, k);
 	}
 	
+	/**
+	 * Iterative approach. Same as general In-Order iterative traversal.
+	 * Only difference is, instead of left node, we are traversing right one first
+	 */
+	public void findKthLargestIterative(Node root, int k){
+		if(root==null || k<1)	return;
+		Stack<Node> stack = new Stack<>();
+		int c = 0;
+		Node p = root;
+		
+		while(!stack.isEmpty() || p!=null){
+			if(p!=null){
+				stack.push(p);
+				p = p.right;
+			}
+			else{
+				p = stack.pop();
+				c++;
+				if(k==c){
+					System.out.println(p.value);
+					return;
+				}
+				p = p.left;
+			}
+		}		
+	}
+	
 	public static void main(String[] args) {
 		Node n1 = new Node(20);
 		Node n2 = new Node(8);
@@ -45,6 +74,12 @@ public class KthLargest {
 		obj.findKthLargest(n1, 1);
 		obj.findKthLargest(n1, 3);
 		obj.findKthLargest(n1, 5);
+		
+		System.out.println("----------------------------");
+		
+		obj.findKthLargestIterative(n1, 1);
+		obj.findKthLargestIterative(n1, 3);
+		obj.findKthLargestIterative(n1, 5);
 	}
 
 }
