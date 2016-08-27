@@ -4,6 +4,7 @@ Helping people in preparing for Programming Interviews.
 
 |#|Title|Category|
 |---|-----|---------|
+|57|[Binary Palindrome](./src/bit/palindrome)|Bit Manipulation|
 |56|[In-Order Traversal](./src/tree/inOrder)|Tree|
 |55|[Flatten Binary Tree](./src/tree/flattenBTree)|Tree|
 |54|[In-Order traversal of leaf Nodes](./src/tree/leafNodesInOrder)|Tree|
