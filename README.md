@@ -4,6 +4,8 @@ Helping people in preparing for Programming Interviews.
 
 |#|Title|Category|
 |---|-----|---------|
+|58|[First N prime numbers](./src/algorithms/nPrimeNumbers)|Algorithm|
+|57|[Binary Palindrome](./src/bit/palindrome)|Bit Manipulation|
 |56|[In-Order Traversal](./src/tree/inOrder)|Tree|
 |55|[Flatten Binary Tree](./src/tree/flattenBTree)|Tree|
 |54|[In-Order traversal of leaf Nodes](./src/tree/leafNodesInOrder)|Tree|
@@ -17,7 +19,7 @@ Helping people in preparing for Programming Interviews.
 |46|[Convert BST to DLL](./src/tree/convertBSTtoDLL)|Tree|
 |45|[CoinChange: Min # of ways](./src/dp/coinchange/minCoins)|Dynamic Programming|
 |44|[CoinChange: Total # of ways](./src/dp/coinchange/totalWays)|Dynamic Programming|
-|43|[Implement strStr](./src/string/strstr)|String|
+|43|[Find a Needle in Haystack](./src/string/strstr)|String|
 |42|[Remove Element](./src/array/removeElement)|Array|
 |41|[Remove duplicates from sorted Array](./src/array/removeDuplicatesFromSortedArray)|Array|
 |40|[Reverse Nodes in K group](./src/linkedlist/reverseNodesInKGroups)|LinkedList|

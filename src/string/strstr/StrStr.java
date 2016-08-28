@@ -29,11 +29,33 @@ public class StrStr {
 		return true;
 	}
 	
+	// Another approach
+	// O(n * m)
+	public static int findNeedle(String h, String n){
+		if(h==null || n==null || n.length()>h.length())		return -1;
+		if(n.isEmpty())		return 0;		
+		
+		for(int i=0; i<=(h.length()-n.length()); i++){
+			int count = 0;
+			for(int j=0; j<n.length(); j++){
+				if(h.charAt(i) == n.charAt(j))	count++;
+				else	break;
+			}
+			if(count==n.length())	return i;
+		}
+		return -1;
+	}
+	
 	public static void main(String[] args) {
 		System.out.println(strStr("", ""));
 		System.out.println(strStr("ab", ""));
 		System.out.println(strStr("ab", "b"));
 		System.out.println(strStr("hellobuddy", "dd"));
+		System.out.println("-----------------------");
+		System.out.println(findNeedle("", ""));
+		System.out.println(findNeedle("ab", ""));
+		System.out.println(findNeedle("ab", "b"));
+		System.out.println(findNeedle("hellobuddy", "dd"));
 	}
 
 }

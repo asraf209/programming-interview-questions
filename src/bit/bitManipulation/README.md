@@ -1,5 +1,5 @@
 
-# How to reverse bits in a 32-bit number?
+# How to inverse bits in a 32-bit number?
 
 Given 1101, we should return 0010
 
