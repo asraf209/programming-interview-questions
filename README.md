@@ -4,6 +4,7 @@ Helping people in preparing for Programming Interviews.
 
 |#|Title|Category|
 |---|-----|---------|
+|59|[First non-repeat Character](./src/string/firstNonRepeatChar)|String|
 |58|[First N prime numbers](./src/algorithms/nPrimeNumbers)|Algorithm|
 |57|[Binary Palindrome](./src/bit/palindrome)|Bit Manipulation|
 |56|[In-Order Traversal](./src/tree/inOrder)|Tree|
