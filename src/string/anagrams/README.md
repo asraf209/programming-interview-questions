@@ -9,4 +9,4 @@ You are not allowed to consume twice the size of the Dictionary
 ## Examples
 Dictionary = {"act", "pot", "cat", "top", "add",  "opt", "dad"}
 
-Output: "act", "cat", "pot", "top", "opt", "dad", "add"
+Output: "add", "dad", "act", "cat", "pot", "top", "opt"

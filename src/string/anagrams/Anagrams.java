@@ -9,7 +9,13 @@ import java.util.List;
 public class Anagrams {
 
 	public static void printAnagrams(String[] dict){
-		if(dict==null || dict.length==0)	return;		
+		if(dict==null || dict.length==0)	return;
+		
+		/**
+		 * We could also use Map<Sign, List<Words>>. But since we are not allowed to copy the whole dictionary again,
+		 * we are keeping word indexes in the Map
+		 * But for a Dictionary with no Anagrams, it will actually make another copy of the dictionary
+		 */
 		Map<String, List<Integer>> mapAnagram = new HashMap<>();
 		
 		for(int i=0; i<dict.length; i++){
