@@ -14,11 +14,18 @@ Return
 	 	  /   \		
 	   150     60
 	  / \		/  \
-	120	 200  30  80
+	200	 120  80  30
 	  
 
+
+## Keep in Mind
+
+Children of every node needs to be inverted
+
+
 ## Complexity
-	Time: O(1)
+
+	Time: O(n)
 	
 	Space: O(1) 
 	

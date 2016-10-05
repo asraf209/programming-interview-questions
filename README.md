@@ -4,6 +4,7 @@ Helping people in preparing for Programming Interviews.
 
 |#|Title|Category|
 |---|-----|---------|
+|61|[Invert a Binary Tree](./src/tree/invertBTree)|Tree|
 |60|[Print all Anagrams in a Dictionary](./src/string/anagrams)|String|
 |59|[First non-repeat Character](./src/string/firstNonRepeatChar)|String|
 |58|[First N prime numbers](./src/algorithms/nPrimeNumbers)|Algorithm|
