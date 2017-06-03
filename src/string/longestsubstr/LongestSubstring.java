@@ -56,6 +56,7 @@ public class LongestSubstring {
 	
 	public static void main(String[] args) {
 		System.out.println(longestSubstring("pwwke") + "\n");
+		System.out.println(longestSubstring("pwawke") + "\n");
 		System.out.println(longestSubstring("abcabcd") + "\n");
 		System.out.println(longestSubstring("bbbb") + "\n");
 		System.out.println(longestSubstring("dvdf") + "\n");
