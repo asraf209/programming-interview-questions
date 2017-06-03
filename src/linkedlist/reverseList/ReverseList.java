@@ -53,36 +53,20 @@ public class ReverseList {
 		if(head == null || head.next==null)
 			return head;
 		
-		// Refactored concise version		
-		Node newHead = head;
-		head = head.next;
-		newHead.next = null;
-		
-		while(head!=null){
-			Node tmp = head;
-			head = head.next;
-			tmp.next = newHead;
-			newHead = tmp;
-		}
-		
-		/*Node curr = head.next;
-		Node newTail = head;
-		newTail.next = null;
-		Node newHead = newTail;
-		
-		while(curr!=null){
-			Node tmp = curr;
-			curr = curr.next;
+		Node newHead = null;
+		while(head != null){
+			Node n = head;
+			head = head.next;	// Move forward the head pointer
+			n.next = null;		// Free up the node
 			
-			if(newHead==newTail){
-				newHead = tmp;				
-				newHead.next = newTail;
+			// Add that free node to the new list
+			if(newHead == null)
+				newHead = n;
+			else{
+				n.next = newHead;
+				newHead = n;
 			}
-			else{							
-				tmp.next = newHead;
-				newHead = tmp;
-			}
-		}*/
+		}
 		
 		return newHead;
 	}
