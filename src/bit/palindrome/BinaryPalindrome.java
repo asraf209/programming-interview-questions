@@ -6,6 +6,7 @@ public class BinaryPalindrome {
 	 * The idea is to read each bit, one at a time, of the number from right to left and 
 	 * generate another number using these bits from left to right. 
 	 * Finally, we compare these two numbers. If they are same, the original number is a binary bit palindrome.	 
+	 * O(log2 n + 1)
 	 */
 	public static boolean isPalindrome(int num){
 		if(num==0)	return true;
