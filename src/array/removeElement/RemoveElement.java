@@ -16,6 +16,22 @@ public class RemoveElement {
         return (p1+1);
     }
 
+	// Alternate soln
+	public static int removeElement2(int[] nums, int val) {
+        	if(nums==null || nums.length<1)	return 0;
+        	int s=0, e=nums.length-1;
+		
+		while(s<=e){
+			if(nums[s]==val){
+				swap(s, e);
+				e--;
+			}
+			else	s++;
+		}
+		
+		return e+1;
+    	}
+	
 	public static void main(String[] args) {
 		int[] nums = {3, 2, 2, 3};
 		System.out.println(removeElement(nums, 3));
