@@ -34,6 +34,35 @@ public class TraverseBTInSpiralOrder {
 		}
 	}
 	
+	/**
+	* This can also be done using one Stack and one Queue
+	* Stack to handle odd level Nodes and Queue to handle even level Nodes
+	*/
+	public static void printBTinSpiralOrder2(Node root){
+		if(root == null)	return;
+		Stack<Node> stack = new Stack<>();	// Odd level nodes
+		Queue<Node> queue = new LinkedList<>(); // Even level nodes
+		
+		stack.push(root);
+		while(!stack.isEmpty() || !queue.isEmpty()){
+			while(!stack.isEmpty()){
+				Node n = stack.pop();
+				System.out.println(n.value);
+				
+				if(n.left!=null)	queue.add(n.left);
+				if(n.right!=null)	queue.add(n.right);
+			}
+			
+			while(!queue.isEmpty()){
+				Node n = queue.poll();
+				System.out.println(n.value);
+								
+				if(n.left!=null)	stack.push(n.left);
+				if(n.right!=null)	stack.push(n.right);
+			}
+		}
+	}
+	
 	public static void main(String[] args) {
 		Node n1 = new Node(1);
 		Node n2 = new Node(2);
