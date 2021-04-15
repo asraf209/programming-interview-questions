@@ -16,14 +16,14 @@ public class RemoveElement {
         return (p1+1);
     }
 
-	// Alternate soln
+	// Alternate solution
 	public static int removeElement2(int[] nums, int val) {
         	if(nums==null || nums.length<1)	return 0;
         	int s=0, e=nums.length-1;
 		
 		while(s<=e){
 			if(nums[s]==val){
-				swap(s, e);
+				swap(nums, s, e);
 				e--;
 			}
 			else	s++;
@@ -31,6 +31,12 @@ public class RemoveElement {
 		
 		return e+1;
     	}
+	
+	public static void swap (int[] nums, int s, int e) {
+		int tmp = nums[s];
+		nums[s] = nums[e];
+		nums[e] = tmp;
+	}
 	
 	public static void main(String[] args) {
 		int[] nums = {3, 2, 2, 3};
