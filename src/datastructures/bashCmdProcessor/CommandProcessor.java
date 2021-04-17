@@ -105,6 +105,7 @@ public class CommandProcessor {
 		String line;
 		CommandProcessor cmdProcessor = new CommandProcessor();
 		
+		System.out.print(">> ");
 		while ((line = reader.readLine()) != null) {
 			line = line.trim().toLowerCase();
 			String[] cmds = line.split(" ");
@@ -131,6 +132,8 @@ public class CommandProcessor {
 					System.out.println("Invalid command");
 					continue;
 			}
+			
+			System.out.print(">> ");
 		}
 	}
 }
