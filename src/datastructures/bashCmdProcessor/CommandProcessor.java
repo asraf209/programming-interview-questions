@@ -65,7 +65,9 @@ public class CommandProcessor {
 			return;
 		}
 		
-		current = current.child.get(name);
+		Node tmp = current.child.get(name);
+		if (tmp.isDirectory)	current = tmp;
+		else System.out.println("Not a directory");
 	}
 	
 	void listContents() {
