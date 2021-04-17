@@ -54,3 +54,43 @@ The previous state of the application could be loaded from a file on disk. The c
 
 
 ## Example
+
+	pwd
+	/root
+	mkdir abc
+	ls
+	abc
+	touch root.file
+	ls
+	root.file
+	abc
+	cd abc
+	pwd
+	/root/abc
+	mkdir abc-sub-folder
+	touch abc.file
+	ls
+	abc-sub-folder
+	abc.file
+	ls -r
+	/root/abc	abc-sub-folder
+	/root/abc	abc.file
+	cd abc-sub-folder
+	pwd
+	/root/abc/abc-sub-folder
+	touch sub.file
+	ls
+	sub.file
+	cd ..
+	pwd
+	/root/abc
+	cd ..
+	pwd
+	/root
+	ls -r
+	/root	root.file
+	/root	abc
+	/root/abc	abc-sub-folder
+	/root/abc	abc.file
+	/root/abc/abc-sub-folder	sub.file
+	quit
