@@ -17,6 +17,6 @@ class Node {
 	}
 	
 	public Node(String name, boolean isDirectory) {
-		this(name, isDirectory, null);
+		this(name, isDirectory, null /*parent*/);
 	}
 }

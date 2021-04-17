@@ -47,6 +47,12 @@ public class CommandProcessor {
 		current = current.child.get(name);
 	}
 	
+	void listContents() {
+		for (String fileOrFolder : current.child.keySet()) {
+			System.out.println(current.child.get(fileOrFolder).name);
+		}
+	}
+	
 	public static void main(String[] args) throws IOException{
 		BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
 		String line;
@@ -67,6 +73,9 @@ public class CommandProcessor {
 					break;
 				case "cd":
 					cmdProcessor.changeDirectory(cmds[1]);
+					break;
+				case "ls":
+					cmdProcessor.listContents();
 					break;
 				default:
 					return;
