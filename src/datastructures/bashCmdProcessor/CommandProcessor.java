@@ -28,7 +28,28 @@ public class CommandProcessor {
 			return;
 		}
 		
+		if (name.length() > 100) {
+			System.out.println("Invalid directory name");
+			return;
+		}
+		
 		Node newNode = new Node(name, true /*isDirectory*/);
+		newNode.parent = current;
+		current.child.put(name, newNode);
+	}
+	
+	void createFile(String name) {
+		if (current.child.containsKey(name)) {
+			System.out.println("File already exists");
+			return;
+		}
+		
+		if (name.length() > 100) {
+			System.out.println("Invalid file name");
+			return;
+		}
+		
+		Node newNode = new Node(name, false /*isDirectory*/);
 		newNode.parent = current;
 		current.child.put(name, newNode);
 	}
@@ -77,8 +98,11 @@ public class CommandProcessor {
 				case "ls":
 					cmdProcessor.listContents();
 					break;
+				case "touch":
+					cmdProcessor.createFile(cmds[1]);
+					break;
 				default:
-					return;
+					continue;
 			}
 		}
 	}
