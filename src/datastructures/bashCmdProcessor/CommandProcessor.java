@@ -9,17 +9,19 @@ public class CommandProcessor {
 	Node root = new Node("root" /*name*/, true /*isDirectory*/);
 	Node current = root;
 	
-	void currentDirectoryPath() {
+	String currentDirectoryPath() {
+		return this.currentDirectoryPath(this.current);
+	}
+	
+	String currentDirectoryPath(Node node) {
 		String path = "";
-		Node curr = current;
-		while(curr != root) {
-			path = "/" + curr.name + path;
-			curr = curr.parent;
+		while(node != root) {
+			path = "/" + node.name + path;
+			node = node.parent;
 		}
 		
-		path = "/" + curr.name + path;
-		
-		System.out.println(path);
+		path = "/" + node.name + path;
+		return path;
 	}
 	
 	void makeDirectory(String name) {
@@ -70,9 +72,31 @@ public class CommandProcessor {
 		else System.out.println("Not a directory");
 	}
 	
-	void listContents() {
-		for (String fileOrFolder : current.child.keySet()) {
-			System.out.println(current.child.get(fileOrFolder).name);
+	void listContents(String param) {
+		if (param==null) {
+			// Non-recursive
+			for (String fileOrFolder : current.child.keySet()) {
+				System.out.println(current.child.get(fileOrFolder).name);
+			}
+		}
+		else if (param.equals("-r")) {
+			this.listContentsRecursively(current);
+		}
+	}
+	
+	void listContentsRecursively(Node curr) {
+		if (curr == null)	return;
+				
+		// Current folder contents
+		for (String fileOrFolder : curr.child.keySet()) {
+			System.out.println(this.currentDirectoryPath(curr) + "\t" + curr.child.get(fileOrFolder).name);
+		}
+		
+		// Sub-folder contents
+		for (String fileOrFolder : curr.child.keySet()) {
+			if (curr.child.get(fileOrFolder).isDirectory) {
+				listContentsRecursively(curr.child.get(fileOrFolder)); 
+			}
 		}
 	}
 	
@@ -89,7 +113,7 @@ public class CommandProcessor {
 				case "quit":
 					return;
 				case "pwd":
-					cmdProcessor.currentDirectoryPath();
+					System.out.println(cmdProcessor.currentDirectoryPath());
 					break;
 				case "mkdir":
 					cmdProcessor.makeDirectory(cmds[1]);
@@ -98,12 +122,13 @@ public class CommandProcessor {
 					cmdProcessor.changeDirectory(cmds[1]);
 					break;
 				case "ls":
-					cmdProcessor.listContents();
+					cmdProcessor.listContents(cmds.length > 1 ? cmds[1] : null);
 					break;
 				case "touch":
 					cmdProcessor.createFile(cmds[1]);
 					break;
 				default:
+					System.out.println("Invalid command");
 					continue;
 			}
 		}
