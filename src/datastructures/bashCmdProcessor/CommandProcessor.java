@@ -20,6 +20,10 @@ public class CommandProcessor {
 			node = node.parent;
 		}
 		
+		/**To avoid this loop computation, we can add/set a 'path' property to each Node. 
+		 * That will denote the path from root to current directory.
+		 * newNodePath = current.parent.path + "/" + current.name*/
+		
 		path = "/" + node.name + path;
 		return path;
 	}

@@ -8,6 +8,7 @@ class Node {
 	boolean isDirectory;
 	Node parent;
 	Map<String, Node> child;
+	// String path; // Optional path property to reduce cost on computing pwd.
 	
 	public Node(String name, boolean isDirectory, Node parent) {
 		this.name = name;
