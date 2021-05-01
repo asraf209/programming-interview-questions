@@ -4,6 +4,7 @@ Helping people in preparing for Programming Interviews.
 
 |#|Title|Category|
 |---|-----|---------|
+|64|[Rotate LinkedList by k places](./src/linkedlist/rotateLinkedList)|LinkedList|
 |63|[Trapping rain water](./src/array/trappingRainWater)|Array|
 |62|[Bash like cmd processor](./src/datastructures/bashCmdProcessor)|Data Structure|
 |61|[Invert a Binary Tree](./src/tree/invertBTree)|Tree|
