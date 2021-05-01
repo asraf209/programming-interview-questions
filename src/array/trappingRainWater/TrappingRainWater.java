@@ -1,4 +1,4 @@
-package algorithms.trappingRainWater;
+package array.trappingRainWater;
 
 public class TrappingRainWater {
 	public static int trap(int[] height) {
