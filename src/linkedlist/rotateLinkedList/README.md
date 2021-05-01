@@ -13,5 +13,5 @@ Output: [4,5,1,2,3]
 
 [Example 2](./example2.png)
 
-Input: head = [0,1,2], k = 4
+Input: head = [0,1,2], k = 4	</br>
 Output: [2,0,1]
