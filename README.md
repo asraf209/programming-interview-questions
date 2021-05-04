@@ -5,7 +5,7 @@ Helping people in preparing for Programming Interviews.
 |#|Title|Category|
 |---|-----|---------|
 |69|[Reverse Words in a String](./src/string/reverseWords)|String|
-|68|[Product of Array Except Self](./src/array/mergeIntervals)|Array|
+|68|[Merge Intervals](./src/array/mergeIntervals)|Array|
 |67|[Product of Array Except Self](./src/array/productOfArray)|Array|
 |66|[Number of Islands](./src/graph/numberOfIslands)|Graph Traversal|
 |65|[Reverse Linked List II](./src/linkedlist/reverseLinkedListII)|LinkedList|
