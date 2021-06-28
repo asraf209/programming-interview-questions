@@ -4,12 +4,13 @@ Helping people in preparing for Programming Interviews.
 
 |#|Title|Category|
 |---|-----|---------|
-|69|[Reverse Words in a String](./src/string/reverseWords)|String|
-|68|[Merge Intervals](./src/array/mergeIntervals)|Array|
-|67|[Product of Array Except Self](./src/array/productOfArray)|Array|
-|66|[Number of Islands](./src/graph/numberOfIslands)|Graph Traversal|
-|65|[Reverse Linked List II](./src/linkedlist/reverseLinkedListII)|LinkedList|
-|64|[Rotate LinkedList by k places](./src/linkedlist/rotateLinkedList)|LinkedList|
+|70|[Reverse Words in a String](./src/string/reverseWords)|String|
+|69|[Merge Intervals](./src/array/mergeIntervals)|Array|
+|68|[Product of Array Except Self](./src/array/productOfArray)|Array|
+|67|[Number of Islands](./src/graph/numberOfIslands)|Graph Traversal|
+|66|[Reverse Linked List II](./src/linkedlist/reverseLinkedListII)|LinkedList|
+|65|[Rotate LinkedList by k places](./src/linkedlist/rotateLinkedList)|LinkedList|
+|64|[Pour water](./src/array/pourWater)|Array|
 |63|[Trapping rain water](./src/array/trappingRainWater)|Array|
 |62|[Bash like cmd processor](./src/datastructures/bashCmdProcessor)|Data Structure|
 |61|[Invert a Binary Tree](./src/tree/invertBTree)|Tree|
