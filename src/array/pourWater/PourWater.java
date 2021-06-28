@@ -44,9 +44,17 @@ public class PourWater {
         return tower;
 	}
 	
+	public static void print(int[] a) {
+		for(int n : a){
+			System.out.print(n+",");
+		}
+		
+		System.out.println();
+	}
+	
 	public static void main(String[] args) {
-		System.out.println(pour(new int[] {2,1,1,2,1,2,2}, 4, 3));
-		System.out.println(pour(new int[] {1,2,3,4}, 2, 2));
-		System.out.println(pour(new int[] {3,1,3}, 5, 1));
+		print(pour(new int[] {2,1,1,2,1,2,2}, 4, 3));
+		print(pour(new int[] {1,2,3,4}, 2, 2));
+		pour(new int[] {3,1,3}, 5, 1);
 	}
 }
