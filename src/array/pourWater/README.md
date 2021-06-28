@@ -15,5 +15,5 @@ We can assume there is infinitely high terrain on the two sides out of bounds of
 
 ## Example 1
 
-Input: heights = [2,1,1,2,1,2,2](./example1.png), volume = 4, k = 3 </br>
+Input: heights = [2,1,1,2,1,2,2](./example1.PNG), volume = 4, k = 3 </br>
 Output: [2,2,2,3,2,2,2]
