@@ -4,7 +4,8 @@ Helping people in preparing for Programming Interviews.
 
 |#|Title|Category|
 |---|-----|---------|
-|70|[Reverse Words in a String](./src/string/reverseWords)|String|
+|71|[Reverse Words in a String](./src/string/reverseWords)|String|
+|70|[Implement Iterator/Flatten 2D Vector](./src/array/iterator)|Array|
 |69|[Merge Intervals](./src/array/mergeIntervals)|Array|
 |68|[Product of Array Except Self](./src/array/productOfArray)|Array|
 |67|[Number of Islands](./src/graph/numberOfIslands)|Graph Traversal|
