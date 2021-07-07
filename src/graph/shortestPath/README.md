@@ -1,4 +1,4 @@
-# Find path in a Graph
+# Find shortest path in a Graph
 
 Find the shortest path (distance) between A and B in the following grid:
 
