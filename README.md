@@ -4,11 +4,12 @@ Helping people in preparing for Programming Interviews.
 
 |#|Title|Category|
 |---|-----|---------|
-|73|[Nearest Neighbor City](./src/graph/nearestNeighbor)|Graph Traversal|
-|72|[Shortest path distance in a graph](./src/graph/shortestPath)|Graph Traversal|
-|71|[Reverse Words in a String](./src/string/reverseWords)|String|
-|70|[Implement Iterator/Flatten 2D Vector](./src/array/iterator)|Array|
-|69|[Merge Intervals](./src/mergeIntervals/mergeIntervals)|Intervals|
+|74|[Nearest Neighbor City](./src/graph/nearestNeighbor)|Graph Traversal|
+|73|[Shortest path distance in a graph](./src/graph/shortestPath)|Graph Traversal|
+|72|[Reverse Words in a String](./src/string/reverseWords)|String|
+|71|[Implement Iterator/Flatten 2D Vector](./src/array/iterator)|Array|
+|70|[Employee Free Time](./src/intervals/employeeFreeTime)|Intervals|
+|69|[Merge Intervals](./src/intervals/mergeIntervals)|Intervals|
 |68|[Product of Array Except Self](./src/array/productOfArray)|Array|
 |67|[Number of Islands](./src/graph/numberOfIslands)|Graph Traversal|
 |66|[Reverse Linked List II](./src/linkedlist/reverseLinkedListII)|LinkedList|
