@@ -1,6 +1,5 @@
 Programming Interview Questions
 ===============================
-Helping people in preparing for Programming Interviews. 
 
 |#|Title|Category|
 |---|-----|---------|
