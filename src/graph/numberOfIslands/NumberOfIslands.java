@@ -57,16 +57,16 @@ public class NumberOfIslands {
 	
 	public static void main(String args[]) {
 		int[][] grid1 = {{1,1,1,1,0},
-						{1,1,0,1,0},
-						{1,1,0,0,0},
-						{0,0,0,0,0}};
+						 {1,1,0,1,0},
+						 {1,1,0,0,0},
+						 {0,0,0,0,0}};
 		System.out.println(numberOfIslandsV1(grid1));
 		//System.out.println(numberOfIslandsV2(grid1));
 		
 		int[][] grid2 = {{1,1,0,0,0},
-		        {1,1,0,0,0},
-		        {0,0,1,0,0},
-		        {0,0,0,1,1}};
+		        		 {1,1,0,0,0},
+		        		 {0,0,1,0,0},
+		        		 {0,0,0,1,1}};
 		System.out.println(numberOfIslandsV1(grid2));
 		//System.out.println(numberOfIslandsV2(grid2));
 	}
