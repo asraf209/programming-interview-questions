@@ -7,6 +7,7 @@ import java.util.List;
 public class MergeIntervals {
 	public static int[][] merge(int[][] intervals) {
         // Sort the 2-D array based on start
+		// We can also use PriorityQueue
         // Arrays.sort(intervals, (int[] a, int[] b) -> (a[0] - b[0]));
         Arrays.sort(intervals, (a, b) -> Integer.compare(a[0], b[0]));
         
