@@ -1,25 +1,21 @@
-# Number of Islands
+# Max Area of Island
 
-Given an m x n 2D binary grid grid which represents a map of '1's (land) and '0's (water), return the number of islands.
+You are given an <code>m x n</code> binary matrix <code>grid</code>. An island is a group of <code>1's</code> (representing land) connected 4-directionally (horizontal or vertical.) You may assume all four edges of the grid are surrounded by water.
 
-An island is surrounded by water and is formed by connecting adjacent lands horizontally or vertically. You may assume all four edges of the grid are all surrounded by water.   
+The area of an island is the number of cells with a value <code>1</code> in the island.
+
+Return the maximum area of an island in grid. If there is no island, return <code>0</code>
 
 
 ## Examples
+### [Sample 1](./Sample1.PNG)
+Input: grid = [[0,0,1,0,0,0,0,1,0,0,0,0,0],[0,0,0,0,0,0,0,1,1,1,0,0,0],[0,1,1,0,1,0,0,0,0,0,0,0,0],[0,1,0,0,1,1,0,0,1,0,1,0,0],[0,1,0,0,1,1,0,0,1,1,1,0,0],[0,0,0,0,0,0,0,0,0,0,1,0,0],[0,0,0,0,0,0,0,1,1,1,0,0,0],[0,0,0,0,0,0,0,1,1,0,0,0,0]]	
 
-Input: grid = [				</br>
-  ["1","1","1","1","0"],	</br>
-  ["1","1","0","1","0"],	</br>
-  ["1","1","0","0","0"],	</br>
-  ["0","0","0","0","0"]		</br>
-]							</br>
-Output: 1					</br>
+Output: 6
 
+Explanation: The answer is not 11, because the island must be connected 4-directionally.
 
-Input: grid = [				</br>
-  ["1","1","0","0","0"],	</br>
-  ["1","1","0","0","0"],	</br>
-  ["0","0","1","0","0"],	</br>
-  ["0","0","0","1","1"]		</br>
-]							</br>
-Output: 3					</br>
+### Sample 2
+Input: grid = [[0,0,0,0,0,0,0,0]]
+
+Output: 6

@@ -3,13 +3,14 @@ Programming Interview Questions
 
 |#|Title|Category|
 |---|-----|---------|
-|74|[Nearest Neighbor City](./src/graph/nearestNeighbor)|Graph Traversal|
-|73|[Shortest path distance in a graph](./src/graph/shortestPath)|Graph Traversal|
-|72|[Reverse Words in a String](./src/string/reverseWords)|String|
-|71|[Implement Iterator/Flatten 2D Vector](./src/array/iterator)|Array|
-|70|[Employee Free Time](./src/intervals/employeeFreeTime)|Intervals|
-|69|[Merge Intervals](./src/intervals/mergeIntervals)|Intervals|
-|68|[Product of Array Except Self](./src/array/productOfArray)|Array|
+|75|[Nearest Neighbor City](./src/graph/nearestNeighbor)|Graph Traversal|
+|74|[Shortest path distance in a graph](./src/graph/shortestPath)|Graph Traversal|
+|73|[Reverse Words in a String](./src/string/reverseWords)|String|
+|72|[Implement Iterator/Flatten 2D Vector](./src/array/iterator)|Array|
+|71|[Employee Free Time](./src/intervals/employeeFreeTime)|Intervals|
+|70|[Merge Intervals](./src/intervals/mergeIntervals)|Intervals|
+|69|[Product of Array Except Self](./src/array/productOfArray)|Array|
+|68|[Max Area of Island](./src/graph/maxAreaOfIsland)|Graph Traversal|
 |67|[Number of Islands](./src/graph/numberOfIslands)|Graph Traversal|
 |66|[Reverse Linked List II](./src/linkedlist/reverseLinkedListII)|LinkedList|
 |65|[Rotate LinkedList by k places](./src/linkedlist/rotateLinkedList)|LinkedList|
