@@ -3,6 +3,7 @@ Programming Interview Questions
 
 |#|Title|Category|
 |---|-----|---------|
+|77|[Maximum Profit in Job Scheduling](./src/dp/maximumProfit)|Dynamic Programming|
 |76|[Nearest Neighbor City](./src/graph/nearestNeighbor)|Graph Traversal|
 |75|[Shortest path distance in a graph](./src/graph/shortestPath)|Graph Traversal|
 |74|[Reverse Words in a String](./src/string/reverseWords)|String|
