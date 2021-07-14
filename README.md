@@ -3,6 +3,7 @@ Programming Interview Questions
 
 |#|Title|Category|
 |---|-----|---------|
+|79|[Sudoku Solver](./src/backtracking/sudoku)|Backtracking|
 |78|[Maximum Profit in Job Scheduling](./src/dp/maximumProfit)|Dynamic Programming|
 |77|[Course Schedule](./src/graph/courseSchedule)|Graph Traversal|
 |76|[Nearest Neighbor City](./src/graph/nearestNeighbor)|Graph Traversal|
