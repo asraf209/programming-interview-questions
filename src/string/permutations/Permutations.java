@@ -16,7 +16,7 @@ public class Permutations {
 			for(int i=s; i<=e; i++){
 				swap(str, s, i);
 				permute(str, s+1, e);
-				swap(str, s, i);
+				swap(str, s, i);	// Bring-back the char to be used again
 			}
 		}
 	}
