@@ -3,6 +3,7 @@ Programming Interview Questions
 
 |#|Title|Category|
 |---|-----|---------|
+|80|[Find max height in 2D matrix](./src/graph/maxHeight)|Graph Traversal|
 |79|[Design Browser History](./src/linkedlist/browserHistory)|LinkedList|
 |78|[Sudoku Solver](./src/backtracking/sudoku)|Backtracking|
 |77|[Maximum Profit in Job Scheduling](./src/dp/maximumProfit)|Dynamic Programming|
