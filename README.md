@@ -82,4 +82,4 @@ Programming Interview Questions
 |4|[Validate RPN Expression](./src/algorithms/validateRPN)|Algorithm|
 |3|[Reverse Polish Notation(RPN)](./src/algorithms/rpn)|Algorithm|
 |2|[Valid Parenthesis](./src/algorithms/validparenthesis)|Algorithm|
-|1|[Time Travel HashMap](./src/datastructures/timetravelmap)|Data Structure|
+|1|[Time Based HashMap](./src/datastructures/timeBasedMap)|Data Structure|

@@ -1,10 +1,10 @@
-package datastructures.timetravelmap;
+package datastructures.timeBasedMap;
 
 import java.util.HashMap;
 import java.util.Map;
 import java.util.TreeMap;
 
-public class MapTimeTravel {
+public class TimeBasedHashMap {
 	
 	private Map<Integer, TreeMap<Long, Integer>> mapKtoTV = new HashMap<>();
 	
@@ -42,6 +42,10 @@ public class MapTimeTravel {
 				return mapTV.get(t);
 			else{
 				long closestT = findClosestT(mapTV.keySet().toArray(new Long[mapTV.size()]), t);
+				
+				// We can also use TreeMap.floorKey(key), which does binary search underneath
+				// long closestT = mapTV.floorKey(t);
+				
 				return mapTV.containsKey(closestT)? mapTV.get(closestT) : Integer.MIN_VALUE;
 			}
 		}
@@ -81,7 +85,7 @@ public class MapTimeTravel {
 	}	
 	
 	public static void main(String[] args) {
-		MapTimeTravel mapTimeTravel = new MapTimeTravel();
+		TimeBasedHashMap mapTimeTravel = new TimeBasedHashMap();
 		mapTimeTravel.put(1, 1000, 111);
 		mapTimeTravel.put(1, 100, 11111);
 		

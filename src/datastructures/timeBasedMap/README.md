@@ -1,4 +1,4 @@
-# Time Travel Map
+# Time based Hash Map
 
 Make a map data structure with k, timestamp(t) and v. It should support basic Map <key, value> operations (get, put).
 
