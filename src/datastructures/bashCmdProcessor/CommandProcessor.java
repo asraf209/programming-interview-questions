@@ -4,7 +4,7 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
-//The idea is to create a Prefix Tree, where each Node will wither represent a Directory or File
+//The idea is to create a Prefix Tree, where each Node will either represent a Directory or File
 public class CommandProcessor {
 	Node root = new Node("root" /*name*/, true /*isDirectory*/);
 	Node current = root;
