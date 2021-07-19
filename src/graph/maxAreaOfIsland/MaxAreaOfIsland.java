@@ -9,7 +9,7 @@ public class MaxAreaOfIsland {
 			for (int c=0;c<grid[0].length; c++) {
 				if (grid[r][c]==1) {
 					// We are already in an island. Recursively explore other adjacent area. DFS
-					// explore(r, c, grid, area);
+					// explore(r, c, grid);
 					int area = explore(r, c, grid);
 					maxArea = Math.max(area, maxArea);
 				}
