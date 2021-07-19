@@ -50,7 +50,7 @@ public class LockerLocations {
 		
 		// This is to keep track of nodes, that we have already visited.
 		// We can skip using it though, if all the grid nodes were initialized with -1 value.
-		// So, instead of !visited[r][c] we can use grid[r][c]!=-1
+		// So, instead of !visited[r][c] we can use grid[r][c]==-1
 		boolean[][] visited = new boolean[cityWidth][cityLength];	
 
 		List<int[]> basePoints = new ArrayList<>();
