@@ -3,17 +3,18 @@ Programming Interview Questions
 
 |#|Title|Category|
 |---|-----|---------|
-|80|[Find max height in 2D matrix](./src/graph/maxHeight)|Graph Traversal|
-|79|[Design Browser History](./src/linkedlist/browserHistory)|LinkedList|
-|78|[Sudoku Solver](./src/backtracking/sudoku)|Backtracking|
-|77|[Maximum Profit in Job Scheduling](./src/dp/maximumProfit)|Dynamic Programming|
-|76|[Course Schedule](./src/graph/courseSchedule)|Graph Traversal|
-|75|[Nearest Neighbor City](./src/graph/nearestNeighbor)|Graph Traversal|
-|74|[Shortest path distance in a graph](./src/graph/shortestPath)|Graph Traversal|
-|73|[Implement Iterator/Flatten 2D Vector](./src/array/iterator)|Array|
-|72|[Meeting Scheduler](./src/intervals/meetingScheduler)|Intervals|
-|71|[Employee Free Time](./src/intervals/employeeFreeTime)|Intervals|
-|70|[Merge Intervals](./src/intervals/mergeIntervals)|Intervals|
+|81|[Find max height in 2D matrix](./src/graph/maxHeight)|Graph Traversal|
+|80|[Design Browser History](./src/linkedlist/browserHistory)|LinkedList|
+|79|[Sudoku Solver](./src/backtracking/sudoku)|Backtracking|
+|78|[Maximum Profit in Job Scheduling](./src/dp/maximumProfit)|Dynamic Programming|
+|77|[Course Schedule](./src/graph/courseSchedule)|Graph Traversal|
+|76|[Nearest Neighbor City](./src/graph/nearestNeighbor)|Graph Traversal|
+|75|[Shortest path distance in a graph](./src/graph/shortestPath)|Graph Traversal|
+|74|[Implement Iterator/Flatten 2D Vector](./src/array/iterator)|Array|
+|73|[Meeting Scheduler](./src/intervals/meetingScheduler)|Intervals|
+|72|[Employee Free Time](./src/intervals/employeeFreeTime)|Intervals|
+|71|[Merge Intervals](./src/intervals/mergeIntervals)|Intervals|
+|70|[Frequency of target value in a sorted list](./src/array/frequency)|Array|
 |69|[Product of Array Except Self](./src/array/productOfArray)|Array|
 |68|[Max Area of Island](./src/graph/maxAreaOfIsland)|Graph Traversal|
 |67|[Number of Islands](./src/graph/numberOfIslands)|Graph Traversal|
