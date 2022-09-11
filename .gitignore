@@ -17,6 +17,6 @@ hs_err_pid*
 *.iml
 .idea/
 
-# bin directory #
+# directory #
 bin/
-
+out/
