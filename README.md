@@ -3,6 +3,7 @@ Programming Interview Questions
 
 | #   | Title                                                                              |Category|
 |-----|------------------------------------------------------------------------------------|---------|
+| 84  | [Palindrome with non Alphabetic character](./src/string/palindrome)                |String|
 | 83  | [Name chain length](./src/datastructures/nameChain)									|Data Structure|
 | 82  | [Equal sub set sum partition](./src/dp/equalSubsetSumPartition)                    |Dynamic Programming|
 | 81  | [Find max height in 2D matrix](./src/graph/maxHeight)                              |Graph Traversal|
