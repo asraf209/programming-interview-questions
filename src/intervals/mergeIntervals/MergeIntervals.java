@@ -9,6 +9,12 @@ public class MergeIntervals {
         // Sort the 2-D array based on start
 		// We can also use PriorityQueue
         // Arrays.sort(intervals, (int[] a, int[] b) -> (a[0] - b[0]));
+		// Arrays.sort(intervals, new Comparator<int[]>() {
+		//            @Override
+		//            public int compare (int[] interval1, int[] interval2) {
+		//                return ((interval1[0] - interval2[0])==0) ? (interval1[1] - interval2[1]) : (interval1[0] - interval2[0]);
+		//            }
+		//        });
         Arrays.sort(intervals, (a, b) -> Integer.compare(a[0], b[0]));
         
         // First range

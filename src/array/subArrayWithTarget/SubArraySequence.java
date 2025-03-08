@@ -86,6 +86,9 @@ public class SubArraySequence {
 				
 		int[] e = {15, 2, 4, 8, 9, 5, 10, 23};	
 		System.out.println(obj.findSubSequence21(e, 23));	// returns 1-4
+
+		int[] f = {1, 3, 1, 4, 23};
+		System.out.println(obj.findSubSequence21(f, 8));
 	}
 
 }
