@@ -3,6 +3,7 @@ Programming Interview Questions
 
 | #   | Title                                                                              |Category|
 |-----|------------------------------------------------------------------------------------|---------|
+| 86  | [Implement Rate Limiter](./src/datastructures/rateLimiter)                         |Data Structure|
 | 85  | [Minimum Meeting Rooms](./src/intervals/minMeetingRooms)                           |Intervals|
 | 84  | [Palindrome with non Alphabetic chars](./src/string/palindrome)                		|String|
 | 83  | [Name chain length](./src/datastructures/nameChain)									|Data Structure|
