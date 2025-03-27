@@ -1,59 +1,51 @@
 package datastructures.rateLimiter;
 
 import java.util.HashMap;
+import java.util.LinkedHashMap;
 import java.util.Map;
-import java.util.Map.Entry;
-import java.util.PriorityQueue;
-
-import static java.lang.System.currentTimeMillis;
 
 public class RateLimiter {
-	// <user, <ts, val>>. There can be multiple requests on a single millisecond
-	private static Map<String, Map<Long, Integer>> userRequests = new HashMap<>();
+	// <user, <time-in-minutes, count>>
+	private static Map<String, Map<Long, Integer>> requestsPerUser = new HashMap<>();
 
-	// MinHeap to remove the oldest entry. We're only concerned about last 3s
-	private static Map<String, PriorityQueue<Long>> mapUserToTsHeap = new HashMap<>();
+	public static boolean shouldRateLimit(String userId) {
+		long currentTimeInMinutes = System.currentTimeMillis()/(1000*60);
 
-	static boolean shouldRateLimit(String userId) {
-		long currentTimeinMillis = System.currentTimeMillis();
+		if (requestsPerUser.containsKey(userId)) {
+			// Cleanup entries more than an hour old
+			Map<Long, Integer> requestsByMinute = requestsPerUser.get(userId);
+			for (long eachMinute : requestsByMinute.keySet()) {
+				if ((currentTimeInMinutes - eachMinute) > 60) {
+					requestsByMinute.remove(eachMinute);
+					continue;
+				}
 
-		if (userRequests.containsKey(userId)) {
-			Map<Long, Integer> userRequests = RateLimiter.userRequests.get(userId);
-			PriorityQueue<Long> minHeap = mapUserToTsHeap.get(userId);
-
-			// Cleanup older timestamps. We only need last 3 seconds of data
-			while (!minHeap.isEmpty() && (currentTimeMillis()-minHeap.peek()) > 3000 /*3s*/) {
-				long tsToRemove = minHeap.poll();	// Remove from Heap
-				userRequests.remove(tsToRemove);	// Remove from the user requests map
+				break;
 			}
 
-			// Insert current one
-			userRequests.put(currentTimeinMillis, userRequests.getOrDefault(currentTimeinMillis, 0) + 1);
-			// userRequests.put(userId, requests);
-			minHeap.offer(currentTimeinMillis);
-			// mapUserToTsHeap.put(userId, minHeap);
+			// Deny if more than 5 requests per Minute
+			if (requestsByMinute.containsKey(currentTimeInMinutes) && requestsByMinute.get(currentTimeInMinutes) >= 5) {
+				return true;
+			}
 
-			return shouldDeny(RateLimiter.userRequests.get(userId));
+			// Deny if more than 500 requests per hour
+			int requestsPerHour = 0;
+			for (long eachMinute : requestsByMinute.keySet()) {
+				requestsPerHour += requestsByMinute.get(eachMinute);
+			}
+
+			if (requestsPerHour > 200)	return true;
+
+			requestsByMinute.put(currentTimeInMinutes, requestsByMinute.getOrDefault(currentTimeInMinutes, 0) + 1);
 		}
 		else {
-			Map<Long, Integer> request = new HashMap<>();
-			request.put(currentTimeinMillis, 1);
-			userRequests.put(userId, request);
-
-			PriorityQueue<Long> minHeap = new PriorityQueue<>((ts1, ts2) -> (int)(ts1 - ts2));
-			minHeap.offer(currentTimeinMillis);
-			mapUserToTsHeap.put(userId, minHeap);
-
-			return false;
+			// User doesn't exist
+			Map<Long, Integer> requestsByMinute = new LinkedHashMap<>();
+			requestsByMinute.put(currentTimeInMinutes, 1);
+			requestsPerUser.put(userId, requestsByMinute);
 		}
-	}
 
-	static boolean shouldDeny(Map<Long, Integer> userRequests) {
-		int totalRequests = 0;
-		for (Entry<Long, Integer> entry : userRequests.entrySet()) {
-			totalRequests += entry.getValue();
-		}
-		return totalRequests > 10;
+		return false;
 	}
 
 	public static void main(String[] args) {
