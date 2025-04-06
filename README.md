@@ -3,6 +3,7 @@ Programming Interview Questions
 
 | #   | Title                                                                              |Category|
 |-----|------------------------------------------------------------------------------------|---------|
+| 88  | [Range Sum of BST](./src/tree/rangeSumBST)											|Tree|
 | 87  | [Min remove to make valid parentheses](./src/algorithms/minRemove)					|Algorithm|
 | 86  | [Implement Rate Limiter](./src/datastructures/rateLimiter)                         |Data Structure|
 | 85  | [Minimum Meeting Rooms](./src/intervals/minMeetingRooms)                           |Intervals|

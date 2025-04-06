@@ -1,9 +1,9 @@
-package tree.sumKBST;
+package tree;
 
 public class TreeNode {
-	int value;
-	TreeNode left;
-	TreeNode right;
+	public int value;
+	public TreeNode left;
+	public TreeNode right;
 	
 	public TreeNode(int value){
 		this.value = value;
