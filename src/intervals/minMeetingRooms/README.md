@@ -1,6 +1,6 @@
 # Minimum meeting rooms needed
 
-Given an array of meeting time intervals intervals where intervals[i] = [starti, endi], return the minimum number of conference rooms required.
+Given an array of meeting time intervals where intervals[i] = [starti, endi], return the minimum number of conference rooms required.
 
 ## Examples
 

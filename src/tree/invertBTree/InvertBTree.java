@@ -11,13 +11,13 @@ public class InvertBTree {
 	
 	public TreeNode invertBinaryTree(TreeNode root) {
         if(root==null)  return root;
-        root = swap(root, root.left, root.right);
+        root = swap(root);
         if(root.left!=null) invertBinaryTree(root.left);
         if(root.right!=null) invertBinaryTree(root.right);
         return root;
     }
     
-    public TreeNode swap(TreeNode root, TreeNode left, TreeNode right){
+    public TreeNode swap(TreeNode root){
         TreeNode tmp = root.left;
         root.left = root.right;
         root.right = tmp;

@@ -8,12 +8,16 @@ public class MinMeetingRooms {
 		if (intervals==null || intervals.length < 1)    return 0;
 
 		// Sort them in ascending order, first on start and then on end
+		// Using lambda function
+		Arrays.sort(intervals, (a, b) -> (a[0]-b[0]==0) ? (a[1]-b[1]) : (a[0]-b[0]));
+
+		/* Legacy way
 		Arrays.sort(intervals, new Comparator<int[]>() {
 			@Override
 			public int compare (int[] interval1, int[] interval2) {
 				return ((interval1[0] - interval2[0])==0) ? (interval1[1] - interval2[1]) : (interval1[0] - interval2[0]);
 			}
-		});
+		});*/
 
 		int meetingRoomCount=1;
 		for (int i=1; i<intervals.length; i++) {

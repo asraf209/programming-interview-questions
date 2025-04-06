@@ -28,7 +28,7 @@ public class RateLimiter {
 				return true;
 			}
 
-			// Deny if more than 500 requests per hour
+			// Deny if more than 200 requests per hour
 			int requestsPerHour = 0;
 			for (long eachMinute : requestsByMinute.keySet()) {
 				requestsPerHour += requestsByMinute.get(eachMinute);

@@ -3,9 +3,10 @@ Programming Interview Questions
 
 | #   | Title                                                                              |Category|
 |-----|------------------------------------------------------------------------------------|---------|
+| 87  | [Min remove to make valid parentheses](./src/algorithms/minRemove)					|Algorithm|
 | 86  | [Implement Rate Limiter](./src/datastructures/rateLimiter)                         |Data Structure|
 | 85  | [Minimum Meeting Rooms](./src/intervals/minMeetingRooms)                           |Intervals|
-| 84  | [Palindrome with non Alphabetic chars](./src/string/palindrome)                		|String|
+| 84  | [Palindrome with non Alphabetic chars](./src/string/palindrome)             		|String|
 | 83  | [Name chain length](./src/datastructures/nameChain)									|Data Structure|
 | 82  | [Equal sub set sum partition](./src/dp/equalSubsetSumPartition)                    |Dynamic Programming|
 | 81  | [Find max height in 2D matrix](./src/graph/maxHeight)                              |Graph Traversal|
