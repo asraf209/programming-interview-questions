@@ -12,6 +12,7 @@ public class MedianFinder {
 	public MedianFinder(){
 		count = 0;
 		// MAX HEAP
+		// leftHeap = new PriorityQueue<>((a, b)->Integer.compare(b, a));
 		leftHeap = new PriorityQueue<>(10, new Comparator<Integer>() {			
 			@Override
 			public int compare(Integer o1, Integer o2) {
@@ -20,6 +21,7 @@ public class MedianFinder {
 		});
 		
 		// MIN HEAP
+		// rightHeap = new PriorityQueue<>();
 		rightHeap = new PriorityQueue<>(10, new Comparator<Integer>() {			
 			@Override
 			public int compare(Integer o1, Integer o2) {
@@ -34,7 +36,7 @@ public class MedianFinder {
 	 * 
 	 * Complexity O(logN)
 	 */
-	public void addNum(int n){
+	/*public void addNum(int n){
 		if(count==0 || n<=leftHeap.peek()){
 			leftHeap.offer(n);
 			count++;
@@ -50,15 +52,26 @@ public class MedianFinder {
 			}
 		}
 	}
-	
+
 	public double findMedian(){
 		System.out.println("Count: " + count + ", " + leftHeap.peek() + ", " + rightHeap.peek());
 		if(count%2==0){
 			double median = (leftHeap.peek() + rightHeap.peek()) / 2.0;
 			return median;
 		}
-		
-		return leftHeap.peek(); 
+
+		return leftHeap.peek();
+	}*/
+
+	// Alternate solutions
+	public void addNum(int n){
+		rightHeap.offer(n);
+		if (leftHeap.size() < rightHeap.size())	leftHeap.offer(rightHeap.poll());
+	}
+
+	public double findMedian(){
+		if (leftHeap.size() > rightHeap.size())	return leftHeap.peek();
+		return (leftHeap.peek() + rightHeap.peek()) / 2.0;
 	}
 	
 	public static void main(String[] args) {
