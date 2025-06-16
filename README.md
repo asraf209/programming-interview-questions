@@ -3,28 +3,29 @@ Programming Interview Questions
 
 | #   | Title                                                                              |Category|
 |-----|------------------------------------------------------------------------------------|---------|
-| 89  | [Binary Tree right side view](./src/tree/rightSideView)								|Tree|
-| 88  | [Range Sum of BST](./src/tree/rangeSumBST)											|Tree|
-| 87  | [Min remove to make valid parentheses](./src/algorithms/minRemove)					|Algorithm|
-| 86  | [Implement Rate Limiter](./src/datastructures/rateLimiter)                         |Data Structure|
-| 85  | [Minimum Meeting Rooms](./src/intervals/minMeetingRooms)                           |Intervals|
-| 84  | [Palindrome with non Alphabetic chars](./src/string/palindrome)             		|String|
-| 83  | [Name chain length](./src/datastructures/nameChain)									|Data Structure|
-| 82  | [Equal sub set sum partition](./src/dp/equalSubsetSumPartition)                    |Dynamic Programming|
-| 81  | [Find max height in 2D matrix](./src/graph/maxHeight)                              |Graph Traversal|
-| 80  | [Design Browser History](./src/linkedlist/browserHistory)                          |LinkedList|
-| 79  | [Sudoku Solver](./src/backtracking/sudoku)                                         |Backtracking|
-| 78  | [Maximum Profit in Job Scheduling](./src/dp/maximumProfit)                         |Dynamic Programming|
-| 77  | [Course Schedule](./src/graph/courseSchedule)                                      |Graph Traversal|
-| 76  | [Nearest Neighbor City](./src/graph/nearestNeighbor)                               |Graph Traversal|
-| 75  | [Shortest path distance in a graph](./src/graph/shortestPath)                      |Graph Traversal|
-| 74  | [Implement Iterator/Flatten 2D Vector](./src/array/iterator)                       |Array|
-| 73  | [Meeting Scheduler](./src/intervals/meetingScheduler)                              |Intervals|
-| 72  | [Employee Free Time](./src/intervals/employeeFreeTime)                             |Intervals|
-| 71  | [Merge Intervals](./src/intervals/mergeIntervals)                                  |Intervals|
-| 70  | [Frequency of target value in a sorted list](./src/array/frequency)                |Array|
-| 69  | [Product of Array Except Self](./src/array/productOfArray)                         |Array|
-| 68  | [Max Area of Island](./src/graph/maxAreaOfIsland)                                  |Graph Traversal|
+| 90  | [Binary Tree right side view](./src/tree/rightSideView)								|Tree|
+| 89  | [Range Sum of BST](./src/tree/rangeSumBST)											|Tree|
+| 88  | [Min remove to make valid parentheses](./src/algorithms/minRemove)					|Algorithm|
+| 87  | [Implement Rate Limiter](./src/datastructures/rateLimiter)                         |Data Structure|
+| 86  | [Minimum Meeting Rooms](./src/intervals/minMeetingRooms)                           |Intervals|
+| 85  | [Palindrome with non Alphabetic chars](./src/string/palindrome)             		|String|
+| 84  | [Name chain length](./src/datastructures/nameChain)									|Data Structure|
+| 83  | [Equal sub set sum partition](./src/dp/equalSubsetSumPartition)                    |Dynamic Programming|
+| 82  | [Find max height in 2D matrix](./src/graph/maxHeight)                              |Graph Traversal|
+| 81  | [Design Browser History](./src/linkedlist/browserHistory)                          |LinkedList|
+| 80  | [Sudoku Solver](./src/backtracking/sudoku)                                         |Backtracking|
+| 79  | [Maximum Profit in Job Scheduling](./src/dp/maximumProfit)                         |Dynamic Programming|
+| 78  | [Course Schedule](./src/graph/courseSchedule)                                      |Graph Traversal|
+| 77  | [Nearest Neighbor City](./src/graph/nearestNeighbor)                               |Graph Traversal|
+| 76  | [Shortest path distance in a graph](./src/graph/shortestPath)                      |Graph Traversal|
+| 75  | [Implement Iterator/Flatten 2D Vector](./src/array/iterator)                       |Array|
+| 74  | [Meeting Scheduler](./src/intervals/meetingScheduler)                              |Intervals|
+| 73  | [Employee Free Time](./src/intervals/employeeFreeTime)                             |Intervals|
+| 72  | [Merge Intervals](./src/intervals/mergeIntervals)                                  |Intervals|
+| 71  | [Frequency of target value in a sorted list](./src/array/frequency)                |Array|
+| 70  | [Product of Array Except Self](./src/array/productOfArray)                         |Array|
+| 69  | [Max Area of Island](./src/graph/maxAreaOfIsland)                                  |Graph Traversal|
+| 68  | [Number of Lakes](./src/graph/numberOfLakes)                                   	   |Graph Traversal|
 | 67  | [Number of Islands](./src/graph/numberOfIslands)                                   |Graph Traversal|
 | 66  | [Reverse Linked List II](./src/linkedlist/reverseLinkedListII)                     |LinkedList|
 | 65  | [Rotate LinkedList by k places](./src/linkedlist/rotateLinkedList)                 |LinkedList|
