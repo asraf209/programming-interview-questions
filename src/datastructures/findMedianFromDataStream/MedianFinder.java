@@ -1,6 +1,6 @@
 package datastructures.findMedianFromDataStream;
 
-import java.util.Comparator;
+import java.util.Collections;
 import java.util.PriorityQueue;
 import java.util.Scanner;
 
@@ -12,22 +12,23 @@ public class MedianFinder {
 	public MedianFinder(){
 		count = 0;
 		// MAX HEAP
+		leftHeap = new PriorityQueue<>(Collections.reverseOrder());
 		// leftHeap = new PriorityQueue<>((a, b)->Integer.compare(b, a));
-		leftHeap = new PriorityQueue<>(10, new Comparator<Integer>() {			
+		/*leftHeap = new PriorityQueue<>(10, new Comparator<Integer>() {
 			@Override
 			public int compare(Integer o1, Integer o2) {
 				return o2 - o1;
 			}
-		});
+		});*/
 		
 		// MIN HEAP
-		// rightHeap = new PriorityQueue<>();
-		rightHeap = new PriorityQueue<>(10, new Comparator<Integer>() {			
+		rightHeap = new PriorityQueue<>();
+		/*rightHeap = new PriorityQueue<>(10, new Comparator<Integer>() {
 			@Override
 			public int compare(Integer o1, Integer o2) {
 				return o1 - o2;
 			}
-		});
+		});*/
 	}
 	
 	/**
@@ -36,37 +37,17 @@ public class MedianFinder {
 	 * 
 	 * Complexity O(logN)
 	 */
-	/*public void addNum(int n){
-		if(count==0 || n<=leftHeap.peek()){
+	public void addNum(int n) {
+		if (leftHeap.isEmpty() || n<=leftHeap.peek()) {
 			leftHeap.offer(n);
-			count++;
-			if(count%2==0){
+			if((leftHeap.size()+rightHeap.size())%2==0)
 				rightHeap.offer(leftHeap.poll());
-			}
 		}
-		else{
+		else {
 			rightHeap.offer(n);
-			count++;
-			if(count%2!=0){
+			if((leftHeap.size()+rightHeap.size())%2!=0)
 				leftHeap.offer(rightHeap.poll());
-			}
 		}
-	}
-
-	public double findMedian(){
-		System.out.println("Count: " + count + ", " + leftHeap.peek() + ", " + rightHeap.peek());
-		if(count%2==0){
-			double median = (leftHeap.peek() + rightHeap.peek()) / 2.0;
-			return median;
-		}
-
-		return leftHeap.peek();
-	}*/
-
-	// Alternate solutions
-	public void addNum(int n){
-		rightHeap.offer(n);
-		if (leftHeap.size() < rightHeap.size())	leftHeap.offer(rightHeap.poll());
 	}
 
 	public double findMedian(){
