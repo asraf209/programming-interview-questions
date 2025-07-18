@@ -1,5 +1,6 @@
 package datastructures.heapusingqueue;
 
+import java.util.Collections;
 import java.util.Comparator;
 import java.util.PriorityQueue;
 
@@ -42,7 +43,9 @@ public class Heap {
 				return o2 - o1; 
 			}
 		});
-		
+
+		//PriorityQueue maxHeap = new PriorityQueue(Collections.reverseOrder());
+
 		for(int n : a){
 			maxHeap.offer(n);
 		}
