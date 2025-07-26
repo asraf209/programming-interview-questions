@@ -3,13 +3,13 @@ Programming Interview Questions
 
 | #   | Title                                                                              |Category|
 |-----|------------------------------------------------------------------------------------|---------|
-| 90  | [Binary Tree right side view](./src/tree/rightSideView)								|Tree|
-| 89  | [Range Sum of BST](./src/tree/rangeSumBST)											|Tree|
-| 88  | [Min remove to make valid parentheses](./src/algorithms/minRemove)					|Algorithm|
+| 90  | [Binary Tree right side view](./src/tree/rightSideView)								                    |Tree|
+| 89  | [Range Sum of BST](./src/tree/rangeSumBST)											                              |Tree|
+| 88  | [Min remove to make valid parentheses](./src/algorithms/minRemove)					            |Algorithm|
 | 87  | [Implement Rate Limiter](./src/datastructures/rateLimiter)                         |Data Structure|
 | 86  | [Minimum Meeting Rooms](./src/intervals/minMeetingRooms)                           |Intervals|
-| 85  | [Palindrome with non Alphabetic chars](./src/string/palindrome)             		|String|
-| 84  | [Name chain length](./src/datastructures/nameChain)									|Data Structure|
+| 85  | [Palindrome with non Alphabetic chars](./src/string/palindrome)             		     |String|
+| 84  | [Name chain length](./src/datastructures/nameChain)									                       |Data Structure|
 | 83  | [Equal sub set sum partition](./src/dp/equalSubsetSumPartition)                    |Dynamic Programming|
 | 82  | [Find max height in 2D matrix](./src/graph/maxHeight)                              |Graph Traversal|
 | 81  | [Design Browser History](./src/linkedlist/browserHistory)                          |LinkedList|
@@ -91,5 +91,5 @@ Programming Interview Questions
 | 5   | [Evaluate RPN](./src/algorithms/evaluateRPN)                                       |Algorithm|
 | 4   | [Validate RPN Expression](./src/algorithms/validateRPN)                            |Algorithm|
 | 3   | [Reverse Polish Notation(RPN)](./src/algorithms/rpn)                               |Algorithm|
-| 2   | [Valid Parenthesis](./src/algorithms/validparenthesis)                             |Algorithm|
+| 2   | [Valid Parenthesis](./src/string/validparenthesis)                                 |Algorithm|
 | 1   | [Time Based HashMap](./src/datastructures/timeBasedMap)                            |Data Structure|
